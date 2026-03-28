@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>HTML</title>
+  
+  <!-- HTML -->
+  
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!DOCTYPE html>
+<html>
+<head>
+  <title>レシートAI</title>
+</head>
+<body>
+  <h1>レシート家計簿AI</h1>
+
+  <input type="file" id="imageInput">
+  <button onclick="analyze()">解析</button>
+
+  <p id="result"></p>
+
+  <script src="https://cdn.jsdelivr.net/npm/tesseract.js@2.1.5/dist/tesseract.min.js"></script>
+
+  <script>
+    function analyze() {
+      const file = document.getElementById('imageInput').files[0];
+      if (!file) return;
+
+      document.getElementById('result').innerText = "解析中...";
+
+      Tesseract.recognize(
+        file,
+        'jpn',
+        {
+          logger: m => console.log(m)
+        }
+      ).then(({ data: { text } }) => {
+        document.getElementById('result').innerText = text;
+      });
+    }
+  </script>
+</body>
+  <!-- Project -->
+  <script src="main.js"></script>
+</body>
+</html>
