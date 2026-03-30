@@ -14,7 +14,9 @@
 <body>
   
 <p>問題 1</p>
-<div id="header"></div>
+  <div class="box">
+    パンはパンでも食べられないパンは？
+  </div>
  
 <ol>
   <li><input type="radio" name="radio" id="1" value="opt1"/>ピーターパン</li>
@@ -23,7 +25,11 @@
   <li><input type="radio" name="radio" id="4" value="opt4"/>ナン</li>
 </ol>
       
-<div id="button"></div>
+<div class="button">
+  <input type="button" id="back" value="戻る" onclick="goback()">
+  <input type="button" id="answer" value="OK">
+  <input type="button" id="next" value="次へ" onclick="goNext()">
+</div>
 
   <script src="1page.js"></script>
 </body>

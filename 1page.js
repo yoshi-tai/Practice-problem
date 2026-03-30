@@ -1,18 +1,32 @@
-// header埋め込み
-fetch('common-header.html')
-  .then(res => res.text())
-  .then(data => {
-    document.getElementById("header").innerHTML = data;
-  });
+// 戻るボタンを押した時、履歴の一つ前に戻る
+function goBack() {
+  if (history.length > 1) {
+    history.back();
+  } else {
+    location.href = "index.html"; // トップページに移動
+  }
+}
 
-// button埋め込み
-fetch("common-button.html")
-  .then(res => res.text())
-  .then(data => {
-    document.getElementById("button").innerHTML = data;
-    setEvents();
+// 次へボタンを押した時、次の問題へ行く
+function goNext() {
+  const nextPage = "2page.html";
+location.href = nextPage;
+fetch(nextPage)
+  .then(res => {
+    if (res.ok) {
+      location.href = nextPage;
+    } else {
+      // ページが存在しない場合
+      alert("次のページはありません");
+    }
+  })
+  .catch(() => {
+    // エラー（存在しないなど）
+    alert("次のページはありません");
   });
+}
 
+/*
 // ボタンイベント
 function setEvents() {
   
@@ -41,4 +55,5 @@ window.onload = function() {
       target.checked = true;
     }
   }
-};
+};*/
+
