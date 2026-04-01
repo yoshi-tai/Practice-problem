@@ -2,3 +2,19 @@ img {
   width: 100%;
   height: auto;
 }
+
+.text {
+  width: 300px;
+  display: block;
+  margin: 0 auto;
+}
+
+.button {
+  width: 250px;
+  height: 60px;
+  font-size: 20px;
+  display: block;
+  margin: 0 auto;
+  background-color: #c3f6ff;
+  border-radius: 10px;
+}
