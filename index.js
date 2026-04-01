@@ -17,9 +17,12 @@ function randomText() {
   document.getElementById("randomText").textContent = texts[randomIndex];
 }
 
+
+
 /* 
+ *疾病1 ボタン
  *頑張る？押下→ 頑張る！に変換→ 3秒後遷移
-*/
+ */
 function letsPractice() {
   const btn = document.getElementById("button");
   
