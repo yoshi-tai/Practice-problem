@@ -9,12 +9,13 @@ img {
   margin: 0 auto;
 }
 
-.button {
-  width: 230px;
+table {
+  width: 350px;
   height: 60px;
   font-size: 20px;
-  display: block;
   margin: 0 auto;
+}
+
+.button {
   background-color: #c3f6ff;
-  border-radius: 10px;
 }
