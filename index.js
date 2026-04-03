@@ -21,15 +21,15 @@ function randomText() {
  *疾病1 ボタン
  *頑張る？押下→ 頑張る！に変換→ 3秒後遷移
  */
-function onece_shippei1() {
-  const btn = document.getElementById("onece_shippei1");
+function one_shippei1() {
+  const btn = document.getElementById("one");
   
   // 文字変更
   btn.value = "無理しないでね！";
   
   // 2秒後に遷移
   setTimeout(function() {
-    location.href = "onece_shippei1.html";
+    location.href = "疾病1/one.html";
   }, 2000);
 }
 
