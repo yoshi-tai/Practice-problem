@@ -2,25 +2,26 @@
  *　次へ　ボタン押下時
  *　画面遷移
  */
-function goNext() {
-  const btn = document.getElementById("next");
-  
-  // 2秒後に遷移
-  setTimeout(function() {
+function goNext(btn) {
+  if (btn.id === "one") {
     location.href = "two.html";
-  }, 1000);
+  }
 }
 
-/* 
- *　戻る　ボタン押下時
- *　画面遷移
+/*
+ * 戻るボタンを押した時、履歴の一つ前に戻る
+ * ただし履歴がなかった場合はトップページへ
  */
-function goBack() {
-  const btn = document.getElementById("back");
+function goBack(btn) {
   
-  // 2秒後に遷移
   setTimeout(function() {
-    location.href = "../index.html";
-  }, 500);
+    if (btn.id === "index" || "one") {
+      location.href = "../index.html";
+    } else if (btn.id === "two") {
+      location.href = "one.html";
+    } else if (btn.id === "three") {
+      location.href = "two.html";
+    }
+  }, 1000);
+  
 }
-
