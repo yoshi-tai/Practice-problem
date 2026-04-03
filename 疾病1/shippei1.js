@@ -6,9 +6,16 @@ function goNext(btn) {
   if (btn.id === "one") {
     location.href = "two.html";
   } else if (btn.id === "two") {
-    location.href = "three";
+    location.href = "three.html";
+  } else if(btn.id === "three"){
+    location.href = "four.html"
   } else if (btn.id === "four") {
-    location.href = "four";
+    location.href = "five.html";
+  } else if (btn.id === "five") {
+    location.href = "five.html";
+    
+  } else if (btn.id === "") {
+    location.href = "";
   }
 }
 
@@ -23,5 +30,14 @@ function goBack(btn) {
     location.href = "one.html";
   } else if (btn.id === "three") {
     location.href = "two.html";
-  }
+  } else if (btn.id === "four") {
+   location.href = "three.html";
+ } else if (btn.id === "five") {
+   location.href = "four.html";
+ }
+  
+   else if (btn.id === "") {
+   location.href = ".html";
+ }
+  
 }
