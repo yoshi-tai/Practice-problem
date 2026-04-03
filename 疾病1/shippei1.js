@@ -5,6 +5,10 @@
 function goNext(btn) {
   if (btn.id === "one") {
     location.href = "two.html";
+  } else if (btn.id === "two") {
+    location.href = "three";
+  } else if (btn.id === "four") {
+    location.href = "four";
   }
 }
 
@@ -13,15 +17,11 @@ function goNext(btn) {
  * ただし履歴がなかった場合はトップページへ
  */
 function goBack(btn) {
-  
-  setTimeout(function() {
-    if (btn.id === "index" || "one") {
-      location.href = "../index.html";
-    } else if (btn.id === "two") {
-      location.href = "one.html";
-    } else if (btn.id === "three") {
-      location.href = "two.html";
-    }
-  }, 1000);
-  
+  if (btn.id === "one") {
+    location.href = "../index.html";
+  } else if (btn.id === "two") {
+    location.href = "one.html";
+  } else if (btn.id === "three") {
+    location.href = "two.html";
+  }
 }
