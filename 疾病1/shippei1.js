@@ -3,7 +3,7 @@
  *　画面遷移
  */
 function goNext(btn) {
-  if (btn.id === "one") {
+  if (btn.id === "oneNext") {
     location.href = "two.html";
   } else if (btn.id === "two") {
     location.href = "three.html";

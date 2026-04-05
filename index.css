@@ -19,3 +19,18 @@ table {
 .button {
   background-color: #c3f6ff;
 }
+
+body {
+  margin: 0;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.ploblemNumber {
+  flex: 1;
+}

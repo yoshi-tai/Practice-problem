@@ -1,4 +1,4 @@
-<!DOCTYPE <!DOCTYPE html>
+<!DOCTYPE html
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -13,7 +13,10 @@
 
 <body>
   
-<p>問題 1</p>
+<div class="row">
+  <span class="ploblemNumber">問題 1</span>
+  <input type="button" id="answer" value="答え">
+</div>
   <div class="box">
     抗体を産生するのはどれか。2つ選べ？
   </div>
@@ -30,9 +33,9 @@
 <div class="button">
   <input type="button" id="one" value="戻る" onclick="goBack(this)">
   
-  <input type="button" id="one" value="OK">
+  <input type="button" id="oneOk" value="OK">
   
-  <input type="button" id="one" value="次へ" onclick="goNext(this)">
+  <input type="button" id="oneNext" value="次へ" onclick="goNext(this)">
 </div>
 
   <script src="shippei1.js"></script>
