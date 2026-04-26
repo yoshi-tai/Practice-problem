@@ -1,4 +1,4 @@
-<!DOCTYPE html
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -13,10 +13,11 @@
 
 <body>
   
-<div class="row">
-  <span class="ploblemNumber">問題 1</span>
-  <input type="button" id="answer" value="答え">
+<div class="LineUp">
+  問題 1
+<input type="button" value="答え" onclick="openModal()">
 </div>
+
   <div class="box">
     抗体を産生するのはどれか。2つ選べ？
   </div>
@@ -38,6 +39,16 @@
   <input type="button" id="oneNext" value="次へ" onclick="goNext(this)">
 </div>
 
+
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <p>ここに答えを表示！</p>
+    <input type="button" value="閉じる" onclick="closeModal()">
+  </div>
+</div>
+
+
   <script src="shippei1.js"></script>
+  <script src="answer.js"></script>
 </body>
 </html>

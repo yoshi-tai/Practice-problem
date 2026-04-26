@@ -1,4 +1,20 @@
 /* 
+ * 答えボタン押下時
+ * ①はいorいいえのアラートを出す
+ * ②-1 「はい」なら答えのメソッドを呼び出す
+ * ②-2 「いいえ」ならがんばれ！を表示
+ */
+window.addEventListener('load', function() {
+  var btn = document.getElementById("answer");
+  
+  alert(btn); // ←ここ
+  
+  btn.addEventListener('click', function() {
+    alert("クリックされた"); // ←ここ
+  });
+});
+
+/* 
  *　次へ　ボタン押下時
  *　画面遷移
  */
