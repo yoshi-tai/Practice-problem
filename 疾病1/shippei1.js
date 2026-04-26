@@ -1,18 +1,16 @@
-/* 
- * 答えボタン押下時
- * ①はいorいいえのアラートを出す
- * ②-1 「はい」なら答えのメソッドを呼び出す
- * ②-2 「いいえ」ならがんばれ！を表示
+/* * 問題番号を表示する関数
+ * 問題ごとに呼び出す
  */
-window.addEventListener('load', function() {
-  var btn = document.getElementById("answer");
-  
-  alert(btn); // ←ここ
-  
-  btn.addEventListener('click', function() {
-    alert("クリックされた"); // ←ここ
-  });
-});
+function setProblemNumber() {
+  const problemNumber =
+    document.getElementById("problemNumber").getAttribute("value");
+
+  document.getElementById("problemNumber").textContent = problemNumber;
+}
+
+window.onload = function () {
+  setProblemNumber();
+};
 
 /* 
  *　次へ　ボタン押下時
@@ -55,5 +53,4 @@ function goBack(btn) {
    else if (btn.id === "") {
    location.href = ".html";
  }
-  
 }

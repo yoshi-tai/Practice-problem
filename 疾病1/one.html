@@ -14,8 +14,8 @@
 <body>
   
 <div class="LineUp">
-  問題 1
-<input type="button" value="答え" onclick="openModal()">
+  問題 <span id="problemNumber" value="1" onload="setProblemNumber()"></span>
+<input type="button" value="答え" onclick="showAnswer()">
 </div>
 
   <div class="box">
@@ -39,14 +39,26 @@
   <input type="button" id="oneNext" value="次へ" onclick="goNext(this)">
 </div>
 
+<br/ >
+<div id="modal1" style="display: none;">
+  <details>
+    <summary>【答え】</summary>
+      <div class="answer"></div>
+  </details><br/ >
 
-<div id="modal" class="modal">
-  <div class="modal-content">
-    <p>ここに答えを表示！</p>
-    <input type="button" value="閉じる" onclick="closeModal()">
-  </div>
+  <details>
+    <summary>【解説】</summary>
+      <div class="explanation"></div>
+  </details><br/ >
+
+  <details>
+    <summary>【選択肢の解説】</summary>
+      <div class="option-explanations"></div>
+  </details>
+
+  <br />
+  <input type="button" class="close" value="とじる" onclick="closeModal()">
 </div>
-
 
   <script src="shippei1.js"></script>
   <script src="answer.js"></script>
