@@ -1,3 +1,20 @@
+/* 
+ * OKボタン押下時
+*/
+function OK(){
+  const radio = document.querySelectorAll('input[name="radio"]:checked');
+  
+  // 選ばれた value を配列にする
+  const values = Array.from(checked).map(item => item.value);
+    // 1 と 3 が選ばれているか判定
+
+  if (values.includes("1") && values.includes("3")) {
+    alert("正解！");
+  } else {
+    alert("不正解");
+}
+}
+
 /* 答えボタン押下時
  * ①はいorいいえのアラートを出す
  * ②-1 「はい」なら答えのメソッドを呼び出す
@@ -33,6 +50,7 @@ function closeModal() {
   document.getElementById("modal1").style.display = "none";
 }
 
+/* 答え */
 function answerText(problemNumber) {
   if (problemNumber.textContent === "1") {
     // 問題1の答えを表示
