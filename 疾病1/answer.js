@@ -1,18 +1,42 @@
-/* 
+/**
  * OKボタン押下時
-*/
-function OK(){
-  const radio = document.querySelectorAll('input[name="radio"]:checked');
-  
-  // 選ばれた value を配列にする
-  const values = Array.from(checked).map(item => item.value);
-    // 1 と 3 が選ばれているか判定
+ */
+function oK() {
+  const checkbox = document.querySelectorAll('input[name="checkbox"]:checked');
 
-  if (values.includes("1") && values.includes("3")) {
-    alert("正解！");
-  } else {
-    alert("不正解");
-}
+  // 選ばれた value を配列にする
+  const values = Array.from(checkbox).map(item => item.value);
+
+  // 3 と 6 が選ばれているか判定
+  if (values.includes("opt3") && values.includes("opt6")) {
+    const mark = document.getElementById("correctMark");
+
+    // アニメーションを毎回再実行
+    mark.classList.remove("show");
+
+    setTimeout(function () {
+      mark.classList.add("show");
+    }, 10);
+
+    /* 30秒後に非表示 */
+    setTimeout(function () {
+      mark.classList.remove("show");
+    }, 30000);
+    
+    return;
+  }
+
+  // 片方があっているときのアラートと2つ違う時のアラート
+  if (values.includes("opt3")) {
+    alert("3はあってる！");
+    return;
+  } else if (values.includes("opt6")) {
+    alert("6はあってる！");
+    return;
+  } else if (values.length === 0) {
+    alert("答えは2つだよ！");
+    return;
+  }
 }
 
 /* 答えボタン押下時
