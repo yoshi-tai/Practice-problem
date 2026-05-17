@@ -14,7 +14,7 @@
 <body>
   
 <div class="LineUp">
-  問題 <span id="problemNumber" value="1" onload="setProblemNumber()"></span>
+  問題 <span id="problemNumber" value="1"></span>
 <input type="button" value="答え" onclick="showAnswer()">
 </div>
 
@@ -34,11 +34,9 @@
 </ol>
       
 <div class="button">
-  <input type="button" id="one" value="戻る" onclick="goBack(this)">
-  
-  <input type="button" id="oneOk" value="OK" onclick="oK()">
-  
-  <input type="button" id="oneNext" value="次へ" onclick="goNext(this)">
+  <input type="button" id="back" value="戻る" onclick="goBack(this)">
+  <input type="button" id="answerBtn" value="OK" onclick="oK()">
+  <input type="button" id="next" value="次へ" onclick="goNext(this)">
 </div>
 
 <br/ >
