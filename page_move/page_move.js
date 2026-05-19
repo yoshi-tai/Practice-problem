@@ -3,7 +3,7 @@ window.addEventListener("load", function() {
   // ======================
   // HTML読み込み
   // ======================
-  fetch("../ページ遷移/page_move.html")
+  fetch("../page_move/page_move.html")
     .then(response => response.text())
     .then(data => {
       
