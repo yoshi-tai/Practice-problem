@@ -1,3 +1,3 @@
 <<<<<<< HEAD
-# -Python- minesweeper
-マインスイーパー　ゲーム作成（Python）
+# -Python- shogi
+将棋　ゲーム作成（Python）
