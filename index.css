@@ -1,0 +1,21 @@
+img {
+  width: 100%;
+  height: auto;
+}
+
+.text {
+  width: 300px;
+  display: block;
+  margin: 0 auto;
+}
+
+table {
+  width: 350px;
+  height: 60px;
+  font-size: 20px;
+  margin: 0 auto;
+}
+
+.button {
+  background-color: #c3f6ff;
+}

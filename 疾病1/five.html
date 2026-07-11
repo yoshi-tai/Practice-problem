@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>疾病1 (１回目)</title>
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+  
+<div class="LineUp">
+  問題 <span id="problemNumber" value="5"></span>
+<input type="button" value="答え" onclick="showAnswer()">
+</div>
+
+  <div class="box">
+    創傷治癒について、一次治癒と比較した二次治癒の特徴はどれか。
+  </div>
+ 
+  <div id="correctMark">正解！</div>
+  
+<ol>
+  <li><input type="radio" name="radio" id="1" value="opt1"/>瘢痕を形成する。</li>
+  <li><input type="radio" name="radio" id="2" value="opt2"/>組織欠損が少ない。</li>
+  <li><input type="radio" name="radio" id="3" value="opt3"/>肉芽組織量は少ない。</li>
+  <li><input type="radio" name="radio" id="4" value="opt4"/>組織修復は速やかである。</li>
+</ol>
+      
+<div class="button">
+  <input type="button" id="back" value="戻る" onclick="goBack(this)">
+  <input type="button" id="answerBtn" value="OK" onclick="oK()">
+  <input type="button" id="next" value="次へ" onclick="goNext(this)">
+</div>
+
+<br/ >
+<div id="modal1" style="display: none;">
+  <details>
+    <summary>【答え】</summary>
+      <div class="answer"></div>
+  </details><br/ >
+
+  <details>
+    <summary>【解説】</summary>
+      <div class="explanation"></div>
+  </details><br/ >
+
+  <details>
+    <summary>【選択肢の解説】</summary>
+      <div class="option-explanations"></div>
+  </details>
+
+  <br />
+  <input type="button" class="close" value="とじる" onclick="closeModal()">
+</div>
+
+  <script src="shippei1.js"></script>
+  <script src="answer.js"></script>
+</body>
+</html>

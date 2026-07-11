@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>疾病1 (１回目)</title>
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+  
+<div class="LineUp">
+  問題 <span id="problemNumber" value="6"></span>
+<input type="button" value="答え" onclick="showAnswer()">
+</div>
+
+  <div class="box">
+    急性炎症と比較して慢性炎症に特徴的な所見はどれか。2つ選べ。
+  </div>
+ 
+  <div id="correctMark">正解！</div>
+  
+<ol>
+  <li><input type="checkbox" name="checkbox" id="1" value="opt1"/>好中球浸潤</li>
+  <li><input type="checkbox" name="checkbox" id="2" value="opt2"/>CRPの上昇</li>
+  <li><input type="checkbox" name="checkbox" id="3" value="opt3"/>リンパ球浸潤</li>
+  <li><input type="checkbox" name="checkbox" id="4" value="opt4"/>形質細胞の浸潤</li>
+  <li><input type="checkbox" name="checkbox" id="5" value="opt5"/>血管透過性の亢進</li>
+</ol>
+      
+<div class="button">
+  <input type="button" id="back" value="戻る" onclick="goBack(this)">
+  <input type="button" id="answerBtn" value="OK" onclick="oK()">
+  <input type="button" id="next" value="次へ" onclick="goNext(this)">
+</div>
+
+<br/ >
+<div id="modal1" style="display: none;">
+  <details>
+    <summary>【答え】</summary>
+      <div class="answer"></div>
+  </details><br/ >
+
+  <details>
+    <summary>【解説】</summary>
+      <div class="explanation"></div>
+  </details><br/ >
+
+  <details>
+    <summary>【選択肢の解説】</summary>
+      <div class="option-explanations"></div>
+  </details>
+
+  <br />
+  <input type="button" class="close" value="とじる" onclick="closeModal()">
+</div>
+
+  <script src="shippei1.js"></script>
+  <script src="answer.js"></script>
+</body>
+</html>

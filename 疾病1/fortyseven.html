@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>疾病1 (１回目)</title>
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+  
+<div class="LineUp">
+  問題 <span id="problemNumber" value="47"></span>
+<input type="button" value="答え" onclick="showAnswer()">
+</div>
+
+  <div class="box">
+    次の組み合わせのうち正しくないのはどれか。
+  </div>
+ 
+  <div id="correctMark">正解！</div>
+  
+<ol>
+  <li><input type="radio" name="radio" id="1" value="opt1"/>慢性骨髄性白血病：フィラデルフィア染色体</li>
+  <li><input type="radio" name="radio" id="2" value="opt2"/>急性骨髄性白血病：骨髄芽球の腫瘍化</li>
+  <li><input type="radio" name="radio" id="3" value="opt3"/>ホジキンリンパ腫：ラングハンス巨細胞</li>
+  <li><input type="radio" name="radio" id="4" value="opt4"/>巨赤芽球性貧血：ビタミンB12欠乏</li>
+  <li><input type="radio" name="radio" id="5" value="opt5"/>骨髄異形成症候群：前白血病状態</li>
+</ol>
+      
+<div class="button">
+  <input type="button" id="back" value="戻る" onclick="goBack(this)">
+  <input type="button" id="answerBtn" value="OK" onclick="oK()">
+  <input type="button" id="next" value="次へ" onclick="goNext(this)">
+</div>
+
+<br/ >
+<div id="modal1" style="display: none;">
+  <details>
+    <summary>【答え】</summary>
+      <div class="answer"></div>
+  </details><br/ >
+
+  <details>
+    <summary>【解説】</summary>
+      <div class="explanation"></div>
+  </details><br/ >
+
+  <details>
+    <summary>【選択肢の解説】</summary>
+      <div class="option-explanations"></div>
+  </details>
+
+  <br />
+  <input type="button" class="close" value="とじる" onclick="closeModal()">
+</div>
+
+  <script src="shippei1.js"></script>
+  <script src="answer.js"></script>
+</body>
+</html>

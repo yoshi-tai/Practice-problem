@@ -1,0 +1,46 @@
+.pageMoveArea {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.pageInfo {
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.pageButtonArea {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+#pageButtons {
+  display: flex;
+  gap: 5px;
+}
+
+.pageBtn {
+  min-width: 45px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.pageBtn:disabled {
+  background-color: lightgray;
+  cursor: default;
+}
+
+#prevGroupBtn,
+#nextGroupBtn {
+  min-width: 50px;
+  height: 40px;
+}
+
+#prevGroupBtn:disabled,
+#nextGroupBtn:disabled {
+  background-color: lightgray;
+  cursor: default;
+}

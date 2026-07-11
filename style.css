@@ -1,0 +1,85 @@
+/*
+ * 問題部分のcss
+ */
+.box {
+  border: 1px solid black;
+  padding: 10px;
+  display: inline-block; /* 文字サイズに合わせる */
+  width: 90%;
+}
+
+/* 
+ * 問題Noと答えボタン
+ */
+.LineUp {
+    display: flex;
+    padding: 5px 0px 5px 0px;
+}
+.LineUp input{
+    flex: 1;
+    margin-left: 150px;
+}
+
+/*
+ * buttonクラス内を横並びにする
+ */
+.button {
+    display: flex;
+    width: 100%;
+}
+.button input {
+  /*buttonクラスのinputを同じ幅にする */
+    flex: 1;
+    padding: 10px;
+}
+
+.close {
+  width: 100px;
+}
+
+/* 正解した時の赤丸を表示するためのスタイル */
+#correctMark {
+  display: none;
+  position: fixed;
+
+  /* 画面中央 */
+    position: fixed;
+    top: 55%;
+    left: 45%;
+    transform: translate(-20%, -50%) scale(0.5);
+    font-size: 140px;
+    color: red;
+
+  /* 最前面 */
+  z-index: 99999;
+
+  /* クリックを邪魔しない */
+  pointer-events: none;
+}
+
+/* 表示時のアニメーション */
+#correctMark.show {
+  display: block;
+  animation: popCircle 1.2s ease;
+}
+
+@keyframes popCircle {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.3);
+  }
+
+  40% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.3);
+  }
+
+  70% {
+    transform: translate(-50%, -50%) scale(1.0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+}
