@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>疾病1_3回目 3</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../page_move/page_move.css">
+</head>
+<body>
+<div class="LineUp">
+  問題 <span id="problemNumber" value="3"></span>
+  <input type="button" value="答え" onclick="showAnswer()">
+</div>
+
+<div class="box">
+  性周期が規則的で健常な成人女性において、着床が起こる時期に血中濃度が最も高くなるホルモンはどれか。
+</div>
+
+<div id="correctMark">正解！</div>
+
+<ol>
+  <li><input type="checkbox" name="checkbox" id="opt1" value="opt1"/>アルドステロン</li><li><input type="checkbox" name="checkbox" id="opt2" value="opt2"/>プロゲステロン</li><li><input type="checkbox" name="checkbox" id="opt3" value="opt3"/>エストラジオール</li><li><input type="checkbox" name="checkbox" id="opt4" value="opt4"/>黄体形成ホルモン〈LH〉</li><li><input type="checkbox" name="checkbox" id="opt5" value="opt5"/>卵胞刺激ホルモン〈FSH〉</li>
+</ol>
+
+<div class="button">
+  <input type="button" id="back" value="戻る" onclick="goBack(this)">
+  <input type="button" id="answerBtn" value="OK" onclick="oK()">
+  <input type="button" id="next" value="次へ" onclick="goNext(this)">
+</div>
+
+<br/>
+<div id="modal1" style="display: none;">
+  <details>
+    <summary>【答え】</summary>
+    <div>2</div>
+  </details><br/>
+
+  <details>
+    <summary>【答えの解説】</summary>
+    <div>プロゲステロン</div>
+  </details><br/>
+
+  <details>
+    <summary>【選択肢の解説】</summary>
+    <div><ul><li><strong>opt1</strong>: アルドステロン</li><li><strong>opt3</strong>: エストラジオール</li><li><strong>opt4</strong>: 黄体形成ホルモン〈LH〉</li><li><strong>opt5</strong>: 卵胞刺激ホルモン〈FSH〉</li></ul></div>
+  </details>
+
+  <br />
+  <input type="button" class="close" value="とじる" onclick="closeModal()">
+</div>
+
+<div id="pageMove"></div>
+
+<script src="shippei1.js"></script>
+<script src="answer.js"></script>
+<script src="../page_move/page_move.js"></script>
+</body>
+</html>

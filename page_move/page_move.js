@@ -21,7 +21,7 @@ function initPageMove() {
   // ======================
   // ページ名一覧
   // ======================
-  const fileNames = [
+  const defaultFileNames = [
     "one", "two", "three", "four", "five",
     "six", "seven", "eight", "nine", "ten",
     
@@ -40,20 +40,37 @@ function initPageMove() {
     "fiftyone", "fiftytwo", "fiftythree", "fiftyfour",
     "fiftyfive", "fiftysix", "fiftyseven", "fiftyeight"
   ];
-  
+
+  const fileNames = Array.isArray(window.customPageNames) && window.customPageNames.length > 0
+    ? window.customPageNames
+    : defaultFileNames;
+  const pageBasePath = typeof window.pageBasePath === "string" ? window.pageBasePath : "";
+  const configuredTotalPages = Number(window.customTotalPages);
+  const totalPages = Math.max(
+    0,
+    Math.min(
+      Number.isFinite(configuredTotalPages) && configuredTotalPages > 0
+        ? configuredTotalPages
+        : fileNames.length,
+      fileNames.length
+    )
+  );
   
   // ======================
   // 現在の問題番号取得
   // ======================
-  const currentPage = Number(
+  const currentPageValue = Number(
     document.getElementById("problemNumber").getAttribute("value")
   );
+  const currentPage = Number.isFinite(currentPageValue) && currentPageValue > 0
+    ? currentPageValue
+    : 1;
   
   
   // ======================
   // 表示中グループ
   // ======================
-  let currentGroup = Math.floor((currentPage - 1) / 10);
+  let currentGroup = Math.floor((Math.min(currentPage, totalPages || 1) - 1) / 10);
   
   
   render();
@@ -64,28 +81,33 @@ function initPageMove() {
   // ======================
   function render() {
     
-    const totalPages = 58;
-    
+    const totalPagesToShow = totalPages;
     const pageInfo = document.getElementById("pageInfo");
     const pageButtons = document.getElementById("pageButtons");
     
     const prevGroupBtn = document.getElementById("prevGroupBtn");
     const nextGroupBtn = document.getElementById("nextGroupBtn");
     
+    const resolvedCurrentPage = Math.min(currentPage, totalPagesToShow || 1);
     
     // 上の表示
-    pageInfo.textContent = currentPage + " / " + totalPages;
+    pageInfo.textContent = resolvedCurrentPage + " / " + totalPagesToShow;
     
     
     // ボタン初期化
     pageButtons.innerHTML = "";
     
+    if (totalPagesToShow <= 1) {
+      prevGroupBtn.disabled = true;
+      nextGroupBtn.disabled = true;
+      return;
+    }
     
     const start = currentGroup * 10 + 1;
     let end = start + 9;
     
-    if (end > totalPages) {
-      end = totalPages;
+    if (end > totalPagesToShow) {
+      end = totalPagesToShow;
     }
     
     
@@ -100,7 +122,7 @@ function initPageMove() {
       
       
       // 現在ページ
-      if (i === currentPage) {
+      if (i === resolvedCurrentPage) {
         
         btn.disabled = true;
         
@@ -109,7 +131,7 @@ function initPageMove() {
         btn.addEventListener("click", function() {
           
           location.href =
-            "../疾病1/" +
+            pageBasePath +
             fileNames[i - 1] +
             ".html";
           
@@ -123,7 +145,7 @@ function initPageMove() {
     
     
     // << ボタン
-    prevGroupBtn.disabled = (currentGroup === 0);
+    prevGroupBtn.disabled = (currentGroup === 0 || totalPagesToShow <= 1);
     
     prevGroupBtn.onclick = function() {
       
@@ -141,7 +163,7 @@ function initPageMove() {
     // >> ボタン
     const maxGroup = Math.floor((totalPages - 1) / 10);
     
-    nextGroupBtn.disabled = (currentGroup === maxGroup);
+    nextGroupBtn.disabled = (currentGroup === maxGroup || totalPagesToShow <= 1);
     
     nextGroupBtn.onclick = function() {
       

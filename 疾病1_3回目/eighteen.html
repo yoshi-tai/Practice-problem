@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>疾病1_3回目 18</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../page_move/page_move.css">
+</head>
+<body>
+<div class="LineUp">
+  問題 <span id="problemNumber" value="18"></span>
+  <input type="button" value="答え" onclick="showAnswer()">
+</div>
+
+<div class="box">
+  乳癌術後の左上腕のケア方法で正しいのはどれか。2つ選べ。
+</div>
+
+<div id="correctMark">正解！</div>
+
+<ol>
+  <li><input type="checkbox" name="checkbox" id="opt1" value="opt1"/>指圧する。</li><li><input type="checkbox" name="checkbox" id="opt2" value="opt2"/>皮膚の露出は少なくする。</li><li><input type="checkbox" name="checkbox" id="opt3" value="opt3"/>保湿クリームを塗布する。</li><li><input type="checkbox" name="checkbox" id="opt4" value="opt4"/>ナイロン製タオルで洗う。</li><li><input type="checkbox" name="checkbox" id="opt5" value="opt5"/>アルカリ性石鹸で洗浄する。</li>
+</ol>
+
+<div class="button">
+  <input type="button" id="back" value="戻る" onclick="goBack(this)">
+  <input type="button" id="answerBtn" value="OK" onclick="oK()">
+  <input type="button" id="next" value="次へ" onclick="goNext(this)">
+</div>
+
+<br/>
+<div id="modal1" style="display: none;">
+  <details>
+    <summary>【答え】</summary>
+    <div>2, 3</div>
+  </details><br/>
+
+  <details>
+    <summary>【答えの解説】</summary>
+    <div>皮膚の露出は少なくする。<br/>保湿クリームを塗布する。</div>
+  </details><br/>
+
+  <details>
+    <summary>【選択肢の解説】</summary>
+    <div><ul><li><strong>opt1</strong>: 指圧する。</li><li><strong>opt4</strong>: ナイロン製タオルで洗う。</li><li><strong>opt5</strong>: アルカリ性石鹸で洗浄する。</li></ul></div>
+  </details>
+
+  <br />
+  <input type="button" class="close" value="とじる" onclick="closeModal()">
+</div>
+
+<div id="pageMove"></div>
+
+<script src="shippei1.js"></script>
+<script src="answer.js"></script>
+<script src="../page_move/page_move.js"></script>
+</body>
+</html>

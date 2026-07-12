@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>疾病1_1回目 10</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../page_move/page_move.css">
+</head>
+<body>
+<div class="LineUp">
+  問題 <span id="problemNumber" value="10"></span>
+  <input type="button" value="答え" onclick="showAnswer()">
+</div>
+
+<div class="box">
+  高度に進行した糖尿病に関連しない病態はどれか。
+</div>
+
+<div id="correctMark">正解！</div>
+
+<ol>
+  <li><input type="checkbox" name="checkbox" id="opt1" value="opt1"/>易感染状態</li><li><input type="checkbox" name="checkbox" id="opt2" value="opt2"/>失明</li><li><input type="checkbox" name="checkbox" id="opt3" value="opt3"/>心筋梗塞</li><li><input type="checkbox" name="checkbox" id="opt4" value="opt4"/>慢性腎不全による血液透析</li><li><input type="checkbox" name="checkbox" id="opt5" value="opt5"/>C型ウイルス性肝炎</li>
+</ol>
+
+<div class="button">
+  <input type="button" id="back" value="戻る" onclick="goBack(this)">
+  <input type="button" id="answerBtn" value="OK" onclick="oK()">
+  <input type="button" id="next" value="次へ" onclick="goNext(this)">
+</div>
+
+<br/>
+<div id="modal1" style="display: none;">
+  <details>
+    <summary>【答え】</summary>
+    <div>5</div>
+  </details><br/>
+
+  <details>
+    <summary>【答えの解説】</summary>
+    <div>C型ウイルス性肝炎：糖尿病の進行による病態ではない。</div>
+  </details><br/>
+
+  <details>
+    <summary>【選択肢の解説】</summary>
+    <div><ul><li><strong>opt1</strong>: 易感染状態：糖尿病で起こりやすい。</li><li><strong>opt2</strong>: 失明：糖尿病性網膜症による。</li><li><strong>opt3</strong>: 心筋梗塞：糖尿病による大血管症と関連する。</li><li><strong>opt4</strong>: 慢性腎不全による血液透析：糖尿病性腎症と関連する。</li></ul></div>
+  </details>
+
+  <br />
+  <input type="button" class="close" value="とじる" onclick="closeModal()">
+</div>
+
+<div id="pageMove"></div>
+
+<script src="shippei1.js"></script>
+<script src="answer.js"></script>
+<script src="../page_move/page_move.js"></script>
+</body>
+</html>

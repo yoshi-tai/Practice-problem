@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>疾病1_1回目 11</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../page_move/page_move.css">
+</head>
+<body>
+<div class="LineUp">
+  問題 <span id="problemNumber" value="11"></span>
+  <input type="button" value="答え" onclick="showAnswer()">
+</div>
+
+<div class="box">
+  黄疸や胆汁酸に関して正しいのはどれか。2つ選べ。
+</div>
+
+<div id="correctMark">正解！</div>
+
+<ol>
+  <li><input type="checkbox" name="checkbox" id="opt1" value="opt1"/>胆汁酸は大部分が回腸から大腸で再吸収される。</li><li><input type="checkbox" name="checkbox" id="opt2" value="opt2"/>胆道癌による閉塞性黄疸〈肝後性黄疸〉では間接ビリルビンが増加する。</li><li><input type="checkbox" name="checkbox" id="opt3" value="opt3"/>高度な閉塞性黄疸では便が灰白色になる。</li><li><input type="checkbox" name="checkbox" id="opt4" value="opt4"/>溶血性黄疸〈肝前性黄疸〉では直接ビリルビンが増加する。</li><li><input type="checkbox" name="checkbox" id="opt5" value="opt5"/>間接ビリルビンは脾臓でグルクロン酸抱合されて直接ビリルビンに変換される。</li>
+</ol>
+
+<div class="button">
+  <input type="button" id="back" value="戻る" onclick="goBack(this)">
+  <input type="button" id="answerBtn" value="OK" onclick="oK()">
+  <input type="button" id="next" value="次へ" onclick="goNext(this)">
+</div>
+
+<br/>
+<div id="modal1" style="display: none;">
+  <details>
+    <summary>【答え】</summary>
+    <div>1, 3</div>
+  </details><br/>
+
+  <details>
+    <summary>【答えの解説】</summary>
+    <div>胆汁酸は大部分が回腸から大腸で再吸収される。→ 正しい。<br/>高度な閉塞性黄疸では便が灰白色になる。→ 正しい。</div>
+  </details><br/>
+
+  <details>
+    <summary>【選択肢の解説】</summary>
+    <div><ul><li><strong>opt2</strong>: 閉塞性黄疸では間接ビリルビンが増加する。→ 直接ビリルビンが増加する。</li><li><strong>opt4</strong>: 溶血性黄疸では直接ビリルビンが増加する。→ 間接ビリルビンが増加する。</li><li><strong>opt5</strong>: 間接ビリルビンは脾臓で抱合される。→ 抱合は肝臓で行われる。</li></ul></div>
+  </details>
+
+  <br />
+  <input type="button" class="close" value="とじる" onclick="closeModal()">
+</div>
+
+<div id="pageMove"></div>
+
+<script src="shippei1.js"></script>
+<script src="answer.js"></script>
+<script src="../page_move/page_move.js"></script>
+</body>
+</html>

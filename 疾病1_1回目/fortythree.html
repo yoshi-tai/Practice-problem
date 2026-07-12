@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>疾病1_1回目 43</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../page_move/page_move.css">
+</head>
+<body>
+<div class="LineUp">
+  問題 <span id="problemNumber" value="43"></span>
+  <input type="button" value="答え" onclick="showAnswer()">
+</div>
+
+<div class="box">
+  胃がんのVirchow〈ウィルヒョウ〉転移が生じる部位はどれか。
+</div>
+
+<div id="correctMark">正解！</div>
+
+<ol>
+  <li><input type="checkbox" name="checkbox" id="opt1" value="opt1"/>腋窩</li><li><input type="checkbox" name="checkbox" id="opt2" value="opt2"/>鼠径部</li><li><input type="checkbox" name="checkbox" id="opt3" value="opt3"/>右季肋部</li><li><input type="checkbox" name="checkbox" id="opt4" value="opt4"/>左鎖骨上窩</li>
+</ol>
+
+<div class="button">
+  <input type="button" id="back" value="戻る" onclick="goBack(this)">
+  <input type="button" id="answerBtn" value="OK" onclick="oK()">
+  <input type="button" id="next" value="次へ" onclick="goNext(this)">
+</div>
+
+<br/>
+<div id="modal1" style="display: none;">
+  <details>
+    <summary>【答え】</summary>
+    <div>4</div>
+  </details><br/>
+
+  <details>
+    <summary>【答えの解説】</summary>
+    <div>左鎖骨上窩：胃癌などの消化器癌が、左鎖骨上窩の静脈角付近のリンパ節に転移することをウィルヒョウ転移という。</div>
+  </details><br/>
+
+  <details>
+    <summary>【選択肢の解説】</summary>
+    <div><ul><li><strong>opt1</strong>: 腋窩リンパ節：乳癌でリンパ行性転移しやすい。</li><li><strong>opt2</strong>: 鼠径部リンパ節：子宮体癌や大腸癌などで転移することがある。</li><li><strong>opt3</strong>: 右季肋部：肝臓や胆嚢などへの転移や障害が疑われる症状と関連する。</li></ul></div>
+  </details>
+
+  <br />
+  <input type="button" class="close" value="とじる" onclick="closeModal()">
+</div>
+
+<div id="pageMove"></div>
+
+<script src="shippei1.js"></script>
+<script src="answer.js"></script>
+<script src="../page_move/page_move.js"></script>
+</body>
+</html>

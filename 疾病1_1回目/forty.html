@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>疾病1_1回目 40</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../page_move/page_move.css">
+</head>
+<body>
+<div class="LineUp">
+  問題 <span id="problemNumber" value="40"></span>
+  <input type="button" value="答え" onclick="showAnswer()">
+</div>
+
+<div class="box">
+  臓器の移植に関する法律における脳死の判定で正しいのはどれか。
+</div>
+
+<div id="correctMark">正解！</div>
+
+<ol>
+  <li><input type="checkbox" name="checkbox" id="opt1" value="opt1"/>瞳孔径は左右とも3mm以上</li><li><input type="checkbox" name="checkbox" id="opt2" value="opt2"/>脳波上徐波の出現</li><li><input type="checkbox" name="checkbox" id="opt3" value="opt3"/>微弱な自発呼吸</li><li><input type="checkbox" name="checkbox" id="opt4" value="opt4"/>脳幹反射の消失</li><li><input type="checkbox" name="checkbox" id="opt5" value="opt5"/>浅昏睡</li>
+</ol>
+
+<div class="button">
+  <input type="button" id="back" value="戻る" onclick="goBack(this)">
+  <input type="button" id="answerBtn" value="OK" onclick="oK()">
+  <input type="button" id="next" value="次へ" onclick="goNext(this)">
+</div>
+
+<br/>
+<div id="modal1" style="display: none;">
+  <details>
+    <summary>【答え】</summary>
+    <div>4</div>
+  </details><br/>
+
+  <details>
+    <summary>【答えの解説】</summary>
+    <div>脳幹反射の消失。→ 正しい。</div>
+  </details><br/>
+
+  <details>
+    <summary>【選択肢の解説】</summary>
+    <div><ul><li><strong>opt1</strong>: 瞳孔径は左右とも3mm以上。→ 4mm以上。</li><li><strong>opt2</strong>: 脳波上徐波の出現。→ 平坦脳波。</li><li><strong>opt3</strong>: 微弱な自発呼吸。→ 自発呼吸の消失。</li><li><strong>opt5</strong>: 浅昏睡。→ 深昏睡。</li></ul></div>
+  </details>
+
+  <br />
+  <input type="button" class="close" value="とじる" onclick="closeModal()">
+</div>
+
+<div id="pageMove"></div>
+
+<script src="shippei1.js"></script>
+<script src="answer.js"></script>
+<script src="../page_move/page_move.js"></script>
+</body>
+</html>

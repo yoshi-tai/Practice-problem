@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>疾病1_1回目 13</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../page_move/page_move.css">
+</head>
+<body>
+<div class="LineUp">
+  問題 <span id="problemNumber" value="13"></span>
+  <input type="button" value="答え" onclick="showAnswer()">
+</div>
+
+<div class="box">
+  動脈硬化症の粥腫形成に関与するのはどれか。2つ選べ。
+</div>
+
+<div id="correctMark">正解！</div>
+
+<ol>
+  <li><input type="checkbox" name="checkbox" id="opt1" value="opt1"/>血管内皮細胞</li><li><input type="checkbox" name="checkbox" id="opt2" value="opt2"/>肥満細胞</li><li><input type="checkbox" name="checkbox" id="opt3" value="opt3"/>泡沫細胞</li><li><input type="checkbox" name="checkbox" id="opt4" value="opt4"/>メサンギウム細胞</li><li><input type="checkbox" name="checkbox" id="opt5" value="opt5"/>壁細胞</li>
+</ol>
+
+<div class="button">
+  <input type="button" id="back" value="戻る" onclick="goBack(this)">
+  <input type="button" id="answerBtn" value="OK" onclick="oK()">
+  <input type="button" id="next" value="次へ" onclick="goNext(this)">
+</div>
+
+<br/>
+<div id="modal1" style="display: none;">
+  <details>
+    <summary>【答え】</summary>
+    <div>1, 3</div>
+  </details><br/>
+
+  <details>
+    <summary>【答えの解説】</summary>
+    <div>血管内皮細胞：内皮障害が粥腫形成の開始点となる。<br/>泡沫細胞：マクロファージが脂質を取り込んだもので、粥腫の主成分となる。</div>
+  </details><br/>
+
+  <details>
+    <summary>【選択肢の解説】</summary>
+    <div><ul><li><strong>opt2</strong>: 肥満細胞：粥腫形成の中心的細胞ではない。</li><li><strong>opt4</strong>: メサンギウム細胞：腎糸球体の細胞。</li><li><strong>opt5</strong>: 壁細胞：胃の細胞。</li></ul></div>
+  </details>
+
+  <br />
+  <input type="button" class="close" value="とじる" onclick="closeModal()">
+</div>
+
+<div id="pageMove"></div>
+
+<script src="shippei1.js"></script>
+<script src="answer.js"></script>
+<script src="../page_move/page_move.js"></script>
+</body>
+</html>

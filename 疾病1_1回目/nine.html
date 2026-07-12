@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>疾病1_1回目 9</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../page_move/page_move.css">
+</head>
+<body>
+<div class="LineUp">
+  問題 <span id="problemNumber" value="9"></span>
+  <input type="button" value="答え" onclick="showAnswer()">
+</div>
+
+<div class="box">
+  糖尿病の三大合併症による症状はどれか。
+</div>
+
+<div id="correctMark">正解！</div>
+
+<ol>
+  <li><input type="checkbox" name="checkbox" id="opt1" value="opt1"/>う歯</li><li><input type="checkbox" name="checkbox" id="opt2" value="opt2"/>血尿</li><li><input type="checkbox" name="checkbox" id="opt3" value="opt3"/>昏睡</li><li><input type="checkbox" name="checkbox" id="opt4" value="opt4"/>失明</li><li><input type="checkbox" name="checkbox" id="opt5" value="opt5"/>吐血</li>
+</ol>
+
+<div class="button">
+  <input type="button" id="back" value="戻る" onclick="goBack(this)">
+  <input type="button" id="answerBtn" value="OK" onclick="oK()">
+  <input type="button" id="next" value="次へ" onclick="goNext(this)">
+</div>
+
+<br/>
+<div id="modal1" style="display: none;">
+  <details>
+    <summary>【答え】</summary>
+    <div>4</div>
+  </details><br/>
+
+  <details>
+    <summary>【答えの解説】</summary>
+    <div>失明：糖尿病性網膜症によって起こりうる。</div>
+  </details><br/>
+
+  <details>
+    <summary>【選択肢の解説】</summary>
+    <div><ul><li><strong>opt1</strong>: う歯：糖尿病の三大合併症とは直接関係しない。</li><li><strong>opt2</strong>: 血尿：糖尿病腎症では蛋白尿が主で、血尿は典型ではない。</li><li><strong>opt3</strong>: 昏睡：糖尿病性ケトアシドーシスなどの急性合併症でみられる。</li><li><strong>opt5</strong>: 吐血：糖尿病の三大合併症とは直接関係しない。</li></ul></div>
+  </details>
+
+  <br />
+  <input type="button" class="close" value="とじる" onclick="closeModal()">
+</div>
+
+<div id="pageMove"></div>
+
+<script src="shippei1.js"></script>
+<script src="answer.js"></script>
+<script src="../page_move/page_move.js"></script>
+</body>
+</html>

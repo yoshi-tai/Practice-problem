@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>疾病1_1回目 50</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../page_move/page_move.css">
+</head>
+<body>
+<div class="LineUp">
+  問題 <span id="problemNumber" value="50"></span>
+  <input type="button" value="答え" onclick="showAnswer()">
+</div>
+
+<div class="box">
+  遺伝子について正しいのはどれか。
+</div>
+
+<div id="correctMark">正解！</div>
+
+<ol>
+  <li><input type="checkbox" name="checkbox" id="opt1" value="opt1"/>DNAは体細胞分裂の前に複製される。</li><li><input type="checkbox" name="checkbox" id="opt2" value="opt2"/>DNAは1本のポリヌクレオチド鎖である。</li><li><input type="checkbox" name="checkbox" id="opt3" value="opt3"/>DNAの遺伝子情報からmRNAが作られることを翻訳という。</li><li><input type="checkbox" name="checkbox" id="opt4" value="opt4"/>RNAの塩基配列に基づきアミノ酸がつながることを転写という。</li>
+</ol>
+
+<div class="button">
+  <input type="button" id="back" value="戻る" onclick="goBack(this)">
+  <input type="button" id="answerBtn" value="OK" onclick="oK()">
+  <input type="button" id="next" value="次へ" onclick="goNext(this)">
+</div>
+
+<br/>
+<div id="modal1" style="display: none;">
+  <details>
+    <summary>【答え】</summary>
+    <div>1</div>
+  </details><br/>
+
+  <details>
+    <summary>【答えの解説】</summary>
+    <div>DNAは体細胞分裂の前に複製される。→ 正しい。</div>
+  </details><br/>
+
+  <details>
+    <summary>【選択肢の解説】</summary>
+    <div><ul><li><strong>opt2</strong>: DNAは1本のポリヌクレオチド鎖である。→ DNAは2本鎖である。</li><li><strong>opt3</strong>: DNAの遺伝子情報からmRNAが作られることを翻訳という。→ 転写という。</li><li><strong>opt4</strong>: RNAの塩基配列に基づきアミノ酸がつながることを転写という。→ 翻訳という。</li></ul></div>
+  </details>
+
+  <br />
+  <input type="button" class="close" value="とじる" onclick="closeModal()">
+</div>
+
+<div id="pageMove"></div>
+
+<script src="shippei1.js"></script>
+<script src="answer.js"></script>
+<script src="../page_move/page_move.js"></script>
+</body>
+</html>

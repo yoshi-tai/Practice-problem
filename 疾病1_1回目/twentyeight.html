@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>疾病1_1回目 28</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../page_move/page_move.css">
+</head>
+<body>
+<div class="LineUp">
+  問題 <span id="problemNumber" value="28"></span>
+  <input type="button" value="答え" onclick="showAnswer()">
+</div>
+
+<div class="box">
+  不足すると貧血になるのはどれか。2つ選べ。
+</div>
+
+<div id="correctMark">正解！</div>
+
+<ol>
+  <li><input type="checkbox" name="checkbox" id="opt1" value="opt1"/>ビタミンA</li><li><input type="checkbox" name="checkbox" id="opt2" value="opt2"/>ビタミンB12</li><li><input type="checkbox" name="checkbox" id="opt3" value="opt3"/>ビタミンD</li><li><input type="checkbox" name="checkbox" id="opt4" value="opt4"/>ビタミンE</li><li><input type="checkbox" name="checkbox" id="opt5" value="opt5"/>葉酸</li>
+</ol>
+
+<div class="button">
+  <input type="button" id="back" value="戻る" onclick="goBack(this)">
+  <input type="button" id="answerBtn" value="OK" onclick="oK()">
+  <input type="button" id="next" value="次へ" onclick="goNext(this)">
+</div>
+
+<br/>
+<div id="modal1" style="display: none;">
+  <details>
+    <summary>【答え】</summary>
+    <div>2, 5</div>
+  </details><br/>
+
+  <details>
+    <summary>【答えの解説】</summary>
+    <div>ビタミンB12：欠乏すると巨赤芽球性貧血を起こす。悪性貧血の原因にもなる。<br/>葉酸：欠乏すると巨赤芽球性貧血を起こす。</div>
+  </details><br/>
+
+  <details>
+    <summary>【選択肢の解説】</summary>
+    <div><ul><li><strong>opt1</strong>: ビタミンA：欠乏すると夜盲症、皮膚乾燥などを起こす。</li><li><strong>opt3</strong>: ビタミンD：欠乏すると骨軟化症やくる病を起こす。</li><li><strong>opt4</strong>: ビタミンE：欠乏すると神経障害や溶血を起こすことがある。</li></ul></div>
+  </details>
+
+  <br />
+  <input type="button" class="close" value="とじる" onclick="closeModal()">
+</div>
+
+<div id="pageMove"></div>
+
+<script src="shippei1.js"></script>
+<script src="answer.js"></script>
+<script src="../page_move/page_move.js"></script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>疾病1_1回目</title>
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../page_move/page_move.css">
+</head>
+
+<body>
+  
+<div class="LineUp">
+  問題 <span id="problemNumber" value="1"></span>
+<input type="button" value="答え" onclick="showAnswer()">
+</div>
+
+  <div class="box">
+    抗体を産生するのはどれか。2つ選べ？
+  </div>
+ 
+  <div id="correctMark">正解！</div>
+  
+<ol>
+  <li><input type="checkbox" name="checkbox" id="1" value="opt1"/>好中球</li>
+  <li><input type="checkbox" name="checkbox" id="2" value="opt2"/>好塩基球</li>
+  <li><input type="checkbox" name="checkbox" id="3" value="opt3"/>形質細胞</li>
+  <li><input type="checkbox" name="checkbox" id="4" value="opt4"/>好酸球</li>
+  <li><input type="checkbox" name="checkbox" id="5" value="opt5"/>マクロファージ</li>
+  <li><input type="checkbox" name="checkbox" id="6" value="opt6"/>リンパ球</li>
+</ol>
+      
+<div class="button">
+  <input type="button" id="back" value="戻る" onclick="goBack(this)">
+  <input type="button" id="answerBtn" value="OK" onclick="oK()">
+  <input type="button" id="next" value="次へ" onclick="goNext(this)">
+</div>
+
+<br/ >
+<div id="modal1" style="display: none;">
+  <details>
+    <summary>【答え】</summary>
+      <div>3,6</div>
+  </details><br/ >
+
+  <details>
+    <summary>【答えの解説】</summary>
+      <div>形質細胞（3）」Bリンパ球が分化した細胞で、大量の抗体を産生する主役</div>
+      <div>「リンパ球（6）」Bリンパ球は抗体を産生する細胞で、Tリンパ球は細胞性免疫に関与する</div>
+  </details><br/ >
+
+  <details>
+    <summary>【選択肢の解説】</summary>
+      <div>1,好中球→貪食がメイン</div>
+      <div>2,好塩基球→アレルギー反応に関与</div>
+      <div>4,好酸球→寄生虫・アレルギー感染に反応</div>
+      <div>5,マクロファージ→貪食・抗原掲示がメイン</div>
+  </details>
+
+  <br />
+  <input type="button" class="close" value="とじる" onclick="closeModal()">
+</div>
+
+<div id="pageMove"></div>
+
+  <script src="shippei1.js"></script>
+  <script src="answer.js"></script>
+  <script src="../page_move/page_move.js"></script>
+</body>
+</html>
