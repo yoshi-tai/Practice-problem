@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>小児_事後課題 59</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../page_move/page_move.css">
+</head>
+<body>
+<div class="LineUp">
+  問題 <span id="problemNumber" value="59"></span>
+  <input type="button" value="答え" onclick="showAnswer()">
+</div>
+
+<div class="box">
+  問題
+</div>
+
+<div id="correctMark">正解！</div>
+
+<ol>
+  
+</ol>
+
+<div class="button">
+  <input type="button" id="back" value="戻る" onclick="goBack(this)">
+  <input type="button" id="answerBtn" value="OK" onclick="oK()">
+  <input type="button" id="next" value="次へ" onclick="goNext(this)">
+</div>
+
+<br/>
+<div id="modal1" style="display: none;">
+  <details>
+    <summary>【答え】</summary>
+    <div>1, 4</div>
+  </details><br/>
+
+  <details>
+    <summary>【答えの解説】</summary>
+    <div>1. 麻疹では肺炎や脳炎などの合併症がある。<br/>2. 感染力は発疹前後に強いが、選択肢中では誤りとして扱われる。<br/>3. 麻疹に特異的で効果的な抗ウイルス薬は一般的ではない。<br/>4. 麻疹風疹混合ワクチンなどで2回定期接種が行われる。<br/>5. 麻疹は麻疹ウイルスによる。<br/>60. 麻疹と診断された1歳男児が細気管支炎を併発し付き添い入院した。入院時、母親への説明で適切なのはどれか。<br/>1. 面会は解熱するまで制限する。<br/>2. 発疹が消失するまで清拭は控える。<br/>3. 含嗽して口腔粘膜を保清する。<br/>4. 個室に入室する。</div>
+  </details><br/>
+
+  <details>
+    <summary>【選択肢の解説】</summary>
+    <div></div>
+  </details>
+
+  <br />
+  <input type="button" class="close" value="とじる" onclick="closeModal()">
+</div>
+
+<div id="pageMove"></div>
+
+<script src="shippei1.js"></script>
+<script src="answer.js"></script>
+<script src="../page_move/page_move.js"></script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>小児_事後課題 55</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../page_move/page_move.css">
+</head>
+<body>
+<div class="LineUp">
+  問題 <span id="problemNumber" value="55"></span>
+  <input type="button" value="答え" onclick="showAnswer()">
+</div>
+
+<div class="box">
+  問題
+</div>
+
+<div id="correctMark">正解！</div>
+
+<ol>
+  
+</ol>
+
+<div class="button">
+  <input type="button" id="back" value="戻る" onclick="goBack(this)">
+  <input type="button" id="answerBtn" value="OK" onclick="oK()">
+  <input type="button" id="next" value="次へ" onclick="goNext(this)">
+</div>
+
+<br/>
+<div id="modal1" style="display: none;">
+  <details>
+    <summary>【答え】</summary>
+    <div>4</div>
+  </details><br/>
+
+  <details>
+    <summary>【答えの解説】</summary>
+    <div>1. 乳幼児の食物アレルギーでは鶏卵が多い。<br/>2. 小児喘息ではダニやハウスダストが主要アレルゲンである。<br/>3. 発作は秋など季節変動があり、春期が最も典型とはいえない。<br/>4. 川崎病では冠動脈瘤など冠動脈病変の予防が重要な治療目標である。<br/>56. I型からIV型アレルギーの代表的な疾患をそれぞれ2つ述べてください。<br/>1. I型：気管支喘息、食物アレルギー。<br/>2. II型：特発性血小板減少性紫斑病（ITP）、血液型不適合輸血。<br/>3. III型：全身性エリテマトーデス（SLE）、急性糸球体腎炎。<br/>4. IV型：接触性皮膚炎、ツベルクリン反応。</div>
+  </details><br/>
+
+  <details>
+    <summary>【選択肢の解説】</summary>
+    <div></div>
+  </details>
+
+  <br />
+  <input type="button" class="close" value="とじる" onclick="closeModal()">
+</div>
+
+<div id="pageMove"></div>
+
+<script src="shippei1.js"></script>
+<script src="answer.js"></script>
+<script src="../page_move/page_move.js"></script>
+</body>
+</html>

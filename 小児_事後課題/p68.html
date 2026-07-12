@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>小児_事後課題 68</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../page_move/page_move.css">
+</head>
+<body>
+<div class="LineUp">
+  問題 <span id="problemNumber" value="68"></span>
+  <input type="button" value="答え" onclick="showAnswer()">
+</div>
+
+<div class="box">
+  問題
+</div>
+
+<div id="correctMark">正解！</div>
+
+<ol>
+  
+</ol>
+
+<div class="button">
+  <input type="button" id="back" value="戻る" onclick="goBack(this)">
+  <input type="button" id="answerBtn" value="OK" onclick="oK()">
+  <input type="button" id="next" value="次へ" onclick="goNext(this)">
+</div>
+
+<br/>
+<div id="modal1" style="display: none;">
+  <details>
+    <summary>【答え】</summary>
+    <div>2</div>
+  </details><br/>
+
+  <details>
+    <summary>【答えの解説】</summary>
+    <div>1. 眼のかゆみは高血圧性の合併症として典型ではない。<br/>2. 急性糸球体腎炎で高血圧が進むと高血圧性脳症による意識障害に注意する。<br/>3. 耳漏は関連が低い。<br/>4. 鼻閉は関連が低い。<br/>69. 入院1週、床上安静が続きイライラしている7歳女児への発言で適切なのはどれか。<br/>1. 「すぐに退院できるから頑張ろう」<br/>2. 「好きなだけテレビや動画を観ていいよ」<br/>3. 「ベッドに寝たままプレイルームに行こう」<br/>4. 「夕食後もお母さんに付き添ってもらおう」</div>
+  </details><br/>
+
+  <details>
+    <summary>【選択肢の解説】</summary>
+    <div></div>
+  </details>
+
+  <br />
+  <input type="button" class="close" value="とじる" onclick="closeModal()">
+</div>
+
+<div id="pageMove"></div>
+
+<script src="shippei1.js"></script>
+<script src="answer.js"></script>
+<script src="../page_move/page_move.js"></script>
+</body>
+</html>

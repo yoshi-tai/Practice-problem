@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>小児_事後課題 31</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../page_move/page_move.css">
+</head>
+<body>
+<div class="LineUp">
+  問題 <span id="problemNumber" value="31"></span>
+  <input type="button" value="答え" onclick="showAnswer()">
+</div>
+
+<div class="box">
+  問題
+</div>
+
+<div id="correctMark">正解！</div>
+
+<ol>
+  
+</ol>
+
+<div class="button">
+  <input type="button" id="back" value="戻る" onclick="goBack(this)">
+  <input type="button" id="answerBtn" value="OK" onclick="oK()">
+  <input type="button" id="next" value="次へ" onclick="goNext(this)">
+</div>
+
+<br/>
+<div id="modal1" style="display: none;">
+  <details>
+    <summary>【答え】</summary>
+    <div>4</div>
+  </details><br/>
+
+  <details>
+    <summary>【答えの解説】</summary>
+    <div>1. 1型糖尿病の基本治療はインスリン療法である。<br/>2. 肥満や生活習慣との関連が強いのは主に2型糖尿病である。<br/>3. 有病率は2型糖尿病の方が高い。<br/>4. 膵β細胞破壊により高度のインスリン分泌障害がある。<br/>32. 糖尿病でインスリン療法中の小学3年生が自分でできる療養行動の目標で適切なのはどれか。2つ選べ。<br/>1. インスリン注射<br/>2. 食品の単位換算<br/>3. シックデイ対策<br/>4. 血糖値測定<br/>5. インスリン注射量の調節</div>
+  </details><br/>
+
+  <details>
+    <summary>【選択肢の解説】</summary>
+    <div></div>
+  </details>
+
+  <br />
+  <input type="button" class="close" value="とじる" onclick="closeModal()">
+</div>
+
+<div id="pageMove"></div>
+
+<script src="shippei1.js"></script>
+<script src="answer.js"></script>
+<script src="../page_move/page_move.js"></script>
+</body>
+</html>

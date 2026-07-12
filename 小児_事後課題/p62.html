@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>小児_事後課題 62</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../page_move/page_move.css">
+</head>
+<body>
+<div class="LineUp">
+  問題 <span id="problemNumber" value="62"></span>
+  <input type="button" value="答え" onclick="showAnswer()">
+</div>
+
+<div class="box">
+  問題
+</div>
+
+<div id="correctMark">正解！</div>
+
+<ol>
+  
+</ol>
+
+<div class="button">
+  <input type="button" id="back" value="戻る" onclick="goBack(this)">
+  <input type="button" id="answerBtn" value="OK" onclick="oK()">
+  <input type="button" id="next" value="次へ" onclick="goNext(this)">
+</div>
+
+<br/>
+<div id="modal1" style="display: none;">
+  <details>
+    <summary>【答え】</summary>
+    <div>未設定</div>
+  </details><br/>
+
+  <details>
+    <summary>【答えの解説】</summary>
+    <div>1. 血小板減少性紫斑病は風疹の合併症として知られる。<br/>2. 脳炎はまれだが重要な合併症である。<br/>3. 年長児や成人では関節症状がみられることがある。<br/>4. 胎児への影響として先天性風疹症候群が重要である。<br/>63. 風疹について正しいものはどれか。<br/>1. 発疹は四肢から体幹、顔の順に出現する。<br/>2. 発疹は赤くてかゆみを伴う。<br/>3. 発症すると白血球が急激に増加する。<br/>4. 急性期は水分の摂取を制限する。</div>
+  </details><br/>
+
+  <details>
+    <summary>【選択肢の解説】</summary>
+    <div></div>
+  </details>
+
+  <br />
+  <input type="button" class="close" value="とじる" onclick="closeModal()">
+</div>
+
+<div id="pageMove"></div>
+
+<script src="shippei1.js"></script>
+<script src="answer.js"></script>
+<script src="../page_move/page_move.js"></script>
+</body>
+</html>

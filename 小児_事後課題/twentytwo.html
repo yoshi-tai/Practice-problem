@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>小児_事後課題 22</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../page_move/page_move.css">
+</head>
+<body>
+<div class="LineUp">
+  問題 <span id="problemNumber" value="22"></span>
+  <input type="button" value="答え" onclick="showAnswer()">
+</div>
+
+<div class="box">
+  問題
+</div>
+
+<div id="correctMark">正解！</div>
+
+<ol>
+  
+</ol>
+
+<div class="button">
+  <input type="button" id="back" value="戻る" onclick="goBack(this)">
+  <input type="button" id="answerBtn" value="OK" onclick="oK()">
+  <input type="button" id="next" value="次へ" onclick="goNext(this)">
+</div>
+
+<br/>
+<div id="modal1" style="display: none;">
+  <details>
+    <summary>【答え】</summary>
+    <div>未設定</div>
+  </details><br/>
+
+  <details>
+    <summary>【答えの解説】</summary>
+    <div>1. 医療的ケアや介護負担に応じた訪問看護は在宅継続を支える。<br/>2. 家族の不安や疲労を受け止める相談支援が必要である。<br/>3. 医療、福祉、教育、行政の連携により切れ目ない支援を行う。<br/>4. 介護者の休息を確保し、家族全体の生活を守る。<br/>23. 避難所のプレイルームで4歳児2人が積み木を高く積んで倒し「じしんだー」と繰り返している。この時の支援として適切なのはどれか。2つ選べ。<br/>1. 「なぜそんなことをするの」と問いただす。<br/>2. 「そんなことをしないの」と注意し、すぐにやめさせる。<br/>3. 無理にやめさせず、そのまま見守る。<br/>4. 「一緒に遊ぼう」とままごと遊びへと誘う。<br/>5. 専門家に見てもらうよう母親に勧める。</div>
+  </details><br/>
+
+  <details>
+    <summary>【選択肢の解説】</summary>
+    <div></div>
+  </details>
+
+  <br />
+  <input type="button" class="close" value="とじる" onclick="closeModal()">
+</div>
+
+<div id="pageMove"></div>
+
+<script src="shippei1.js"></script>
+<script src="answer.js"></script>
+<script src="../page_move/page_move.js"></script>
+</body>
+</html>

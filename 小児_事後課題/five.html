@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>小児_事後課題 5</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../page_move/page_move.css">
+</head>
+<body>
+<div class="LineUp">
+  問題 <span id="problemNumber" value="5"></span>
+  <input type="button" value="答え" onclick="showAnswer()">
+</div>
+
+<div class="box">
+  問題
+</div>
+
+<div id="correctMark">正解！</div>
+
+<ol>
+  
+</ol>
+
+<div class="button">
+  <input type="button" id="back" value="戻る" onclick="goBack(this)">
+  <input type="button" id="answerBtn" value="OK" onclick="oK()">
+  <input type="button" id="next" value="次へ" onclick="goNext(this)">
+</div>
+
+<br/>
+<div id="modal1" style="display: none;">
+  <details>
+    <summary>【答え】</summary>
+    <div>3</div>
+  </details><br/>
+
+  <details>
+    <summary>【答えの解説】</summary>
+    <div>1. 論理的な因果関係の理解は学童期以降に発達する。<br/>2. 科学的理解は幼児期にはまだ難しい。<br/>3. 幼児期は自己中心性が強く、自分の行動や思いと病気を結びつけやすい。<br/>4. 抽象的理解はまだ発達途上である。<br/>6. 親の付き添いなしで入院している2歳児。入院当初は号泣し、介助しても食事を受け付けなかった。入院が長期になるにつれ周囲に関心を示し、看護師の世話を受け入れるようになった。子どもの反応のアセスメントで誤っているものはどれか。<br/>1. 号泣は別離の初期にしばしば認められる反応である。<br/>2. 食事を受け付けないことは別離に対する抗議の表れである。<br/>3. 周囲に関心を示すようになっても親との面会は重要である。<br/>4. 看護師の世話を受け入れることは別離のストレスが消失したことを示す。</div>
+  </details><br/>
+
+  <details>
+    <summary>【選択肢の解説】</summary>
+    <div></div>
+  </details>
+
+  <br />
+  <input type="button" class="close" value="とじる" onclick="closeModal()">
+</div>
+
+<div id="pageMove"></div>
+
+<script src="shippei1.js"></script>
+<script src="answer.js"></script>
+<script src="../page_move/page_move.js"></script>
+</body>
+</html>

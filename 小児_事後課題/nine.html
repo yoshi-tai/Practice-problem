@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>小児_事後課題 9</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../page_move/page_move.css">
+</head>
+<body>
+<div class="LineUp">
+  問題 <span id="problemNumber" value="9"></span>
+  <input type="button" value="答え" onclick="showAnswer()">
+</div>
+
+<div class="box">
+  問題
+</div>
+
+<div id="correctMark">正解！</div>
+
+<ol>
+  
+</ol>
+
+<div class="button">
+  <input type="button" id="back" value="戻る" onclick="goBack(this)">
+  <input type="button" id="answerBtn" value="OK" onclick="oK()">
+  <input type="button" id="next" value="次へ" onclick="goNext(this)">
+</div>
+
+<br/>
+<div id="modal1" style="display: none;">
+  <details>
+    <summary>【答え】</summary>
+    <div>1</div>
+  </details><br/>
+
+  <details>
+    <summary>【答えの解説】</summary>
+    <div>1. 外来では感染拡大予防と緊急性判断のため、感染症状の確認が優先される。<br/>2. 育児相談も重要だが、まず安全と感染対策を確認する。<br/>3. 病棟連携は必要時に行う。<br/>4. 社会資源紹介は継続支援として重要だが最優先ではない。<br/>10. 4歳児の母親から「昼間は自分でトイレに行けるようになったのに、まだおねしょするのですが大丈夫でしょうか」と相談があった。看護師の対応で適切なのはどれか。<br/>1. 今は心配ないのでもう少し様子を見ましょう。<br/>2. 夜中に一度起こしておしっこを促してください。<br/>3. 2時間おきにトイレに行く習慣をつけましょう。<br/>4. 小児専門の泌尿器科を受診したほうがよいでしょう。</div>
+  </details><br/>
+
+  <details>
+    <summary>【選択肢の解説】</summary>
+    <div></div>
+  </details>
+
+  <br />
+  <input type="button" class="close" value="とじる" onclick="closeModal()">
+</div>
+
+<div id="pageMove"></div>
+
+<script src="shippei1.js"></script>
+<script src="answer.js"></script>
+<script src="../page_move/page_move.js"></script>
+</body>
+</html>

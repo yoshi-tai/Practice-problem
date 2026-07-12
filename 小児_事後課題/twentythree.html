@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>小児_事後課題 23</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../page_move/page_move.css">
+</head>
+<body>
+<div class="LineUp">
+  問題 <span id="problemNumber" value="23"></span>
+  <input type="button" value="答え" onclick="showAnswer()">
+</div>
+
+<div class="box">
+  問題
+</div>
+
+<div id="correctMark">正解！</div>
+
+<ol>
+  
+</ol>
+
+<div class="button">
+  <input type="button" id="back" value="戻る" onclick="goBack(this)">
+  <input type="button" id="answerBtn" value="OK" onclick="oK()">
+  <input type="button" id="next" value="次へ" onclick="goNext(this)">
+</div>
+
+<br/>
+<div id="modal1" style="display: none;">
+  <details>
+    <summary>【答え】</summary>
+    <div>3, 4</div>
+  </details><br/>
+
+  <details>
+    <summary>【答えの解説】</summary>
+    <div>1. 問いただすと子どもの表現を抑え、不安を強める可能性がある。<br/>2. 災害遊びは体験を処理する表現でもあり、危険がなければすぐ禁止しない。<br/>3. 安全を確保しながら見守ることは適切である。<br/>4. 必要に応じて別の遊びへ自然に誘うことで安心感を支援できる。<br/>5. 直ちに専門家対応が必要とは限らず、まず日常的支援と観察を行う。<br/>24. 災害にあい、避難所生活が1か月を経過する子どもに対する支援で適切なのはどれか。2つ選べ。<br/>1. 子どもたちが利用できるよう運動場の使用時間を確保した。<br/>2. 中学生の子どもに、話したほうが楽になるからと災害のことを話すように勧めた。<br/>3. 子どものぬいぐるみが汚れて不潔だったので捨てるよう助言し、新しいおもちゃを提供した。<br/>4. 子どもの手にマッサージを行った。</div>
+  </details><br/>
+
+  <details>
+    <summary>【選択肢の解説】</summary>
+    <div></div>
+  </details>
+
+  <br />
+  <input type="button" class="close" value="とじる" onclick="closeModal()">
+</div>
+
+<div id="pageMove"></div>
+
+<script src="shippei1.js"></script>
+<script src="answer.js"></script>
+<script src="../page_move/page_move.js"></script>
+</body>
+</html>

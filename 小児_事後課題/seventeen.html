@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>小児_事後課題 17</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../page_move/page_move.css">
+</head>
+<body>
+<div class="LineUp">
+  問題 <span id="problemNumber" value="17"></span>
+  <input type="button" value="答え" onclick="showAnswer()">
+</div>
+
+<div class="box">
+  問題
+</div>
+
+<div id="correctMark">正解！</div>
+
+<ol>
+  
+</ol>
+
+<div class="button">
+  <input type="button" id="back" value="戻る" onclick="goBack(this)">
+  <input type="button" id="answerBtn" value="OK" onclick="oK()">
+  <input type="button" id="next" value="次へ" onclick="goNext(this)">
+</div>
+
+<br/>
+<div id="modal1" style="display: none;">
+  <details>
+    <summary>【答え】</summary>
+    <div>2</div>
+  </details><br/>
+
+  <details>
+    <summary>【答えの解説】</summary>
+    <div>1. 医療的ケアが必要な段階では、まず安全な療養体制を整える。<br/>2. 経管栄養や吸引が必要で、母親が不安を訴えているため訪問看護が優先される。<br/>3. 家事支援も有用だが、医療的ケアへの支援が先である。<br/>4. 子育てグループは社会的支援として有効だが優先度は低い。<br/>18. 小児医療に関する課題とその対応の組合せで正しいのはどれか。<br/>1. 低出生体重児の増加 - 人工乳による哺育の推進<br/>2. 育児不安が強い親の増加 - 子どもの自立支援<br/>3. 障害児の在宅医療のニーズの増加 - レスパイトケアの充実<br/>4. 小児救急医療を受診する子どもの増加 - ドクターカーの充実<br/>5. 成人になった小児慢性疾患患者の増加 - 親の意思決定の支援</div>
+  </details><br/>
+
+  <details>
+    <summary>【選択肢の解説】</summary>
+    <div></div>
+  </details>
+
+  <br />
+  <input type="button" class="close" value="とじる" onclick="closeModal()">
+</div>
+
+<div id="pageMove"></div>
+
+<script src="shippei1.js"></script>
+<script src="answer.js"></script>
+<script src="../page_move/page_move.js"></script>
+</body>
+</html>

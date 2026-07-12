@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>小児_事後課題 39</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../page_move/page_move.css">
+</head>
+<body>
+<div class="LineUp">
+  問題 <span id="problemNumber" value="39"></span>
+  <input type="button" value="答え" onclick="showAnswer()">
+</div>
+
+<div class="box">
+  問題
+</div>
+
+<div id="correctMark">正解！</div>
+
+<ol>
+  
+</ol>
+
+<div class="button">
+  <input type="button" id="back" value="戻る" onclick="goBack(this)">
+  <input type="button" id="answerBtn" value="OK" onclick="oK()">
+  <input type="button" id="next" value="次へ" onclick="goNext(this)">
+</div>
+
+<br/>
+<div id="modal1" style="display: none;">
+  <details>
+    <summary>【答え】</summary>
+    <div>3</div>
+  </details><br/>
+
+  <details>
+    <summary>【答えの解説】</summary>
+    <div>1. そのまま運動すると低血糖が進むおそれがある。<br/>2. 必ず見学ではなく、補食で安全に参加できる場合がある。<br/>3. 運動前血糖が低めなので補食後に参加するのが適切である。<br/>4. 低血糖予防の補食で対応可能な状況であり、直ちに早退受診ではない。<br/>40. 退院に向け、医療者から学校関係者に伝える内容で最も適切なのはどれか。<br/>1. 長距離走や水泳の授業は見学させてください。<br/>2. 宿泊を伴う校外活動は保護者の同伴が必要です。<br/>3. 教室内にインスリン注射を行う場所を設けてください。<br/>4. 家庭科の調理実習は同級生と違う献立にしてください。<br/>5. 手指の震えや強い空腹感があるときはブドウ糖の補食が必要です。</div>
+  </details><br/>
+
+  <details>
+    <summary>【選択肢の解説】</summary>
+    <div></div>
+  </details>
+
+  <br />
+  <input type="button" class="close" value="とじる" onclick="closeModal()">
+</div>
+
+<div id="pageMove"></div>
+
+<script src="shippei1.js"></script>
+<script src="answer.js"></script>
+<script src="../page_move/page_move.js"></script>
+</body>
+</html>

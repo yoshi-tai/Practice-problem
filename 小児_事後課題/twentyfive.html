@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>小児_事後課題 25</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../page_move/page_move.css">
+</head>
+<body>
+<div class="LineUp">
+  問題 <span id="problemNumber" value="25"></span>
+  <input type="button" value="答え" onclick="showAnswer()">
+</div>
+
+<div class="box">
+  問題
+</div>
+
+<div id="correctMark">正解！</div>
+
+<ol>
+  
+</ol>
+
+<div class="button">
+  <input type="button" id="back" value="戻る" onclick="goBack(this)">
+  <input type="button" id="answerBtn" value="OK" onclick="oK()">
+  <input type="button" id="next" value="次へ" onclick="goNext(this)">
+</div>
+
+<br/>
+<div id="modal1" style="display: none;">
+  <details>
+    <summary>【答え】</summary>
+    <div>未設定</div>
+  </details><br/>
+
+  <details>
+    <summary>【答えの解説】</summary>
+    <div>1. 人工呼吸器や吸引器などは電源確保が生命維持に直結する。<br/>2. 緊急時の連絡先と搬送・受診方法を明確にする必要がある。<br/>3. 災害時は物流が止まりやすく、普段より余裕をもった備蓄が必要である。<br/>4. 災害後は子どもも家族も心理的負担が大きく、継続的な支援が必要である。<br/>## 代謝性疾患・内分泌疾患<br/>26. フェニルケトン尿症について正しいものはどれか。<br/>1. わが国ではフェニルケトン尿症のマススクリーニングは行われていない。<br/>2. 常染色体潜性（劣性）遺伝である。<br/>3. 常染色体優性遺伝を示し、新生児期に遷延性黄疸、臍ヘルニア、巨舌がみられる。<br/>4. 症状は知能障害を伴わず、黒い皮膚、赤茶色の髪である。</div>
+  </details><br/>
+
+  <details>
+    <summary>【選択肢の解説】</summary>
+    <div></div>
+  </details>
+
+  <br />
+  <input type="button" class="close" value="とじる" onclick="closeModal()">
+</div>
+
+<div id="pageMove"></div>
+
+<script src="shippei1.js"></script>
+<script src="answer.js"></script>
+<script src="../page_move/page_move.js"></script>
+</body>
+</html>

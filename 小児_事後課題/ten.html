@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>小児_事後課題 10</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../page_move/page_move.css">
+</head>
+<body>
+<div class="LineUp">
+  問題 <span id="problemNumber" value="10"></span>
+  <input type="button" value="答え" onclick="showAnswer()">
+</div>
+
+<div class="box">
+  問題
+</div>
+
+<div id="correctMark">正解！</div>
+
+<ol>
+  
+</ol>
+
+<div class="button">
+  <input type="button" id="back" value="戻る" onclick="goBack(this)">
+  <input type="button" id="answerBtn" value="OK" onclick="oK()">
+  <input type="button" id="next" value="次へ" onclick="goNext(this)">
+</div>
+
+<br/>
+<div id="modal1" style="display: none;">
+  <details>
+    <summary>【答え】</summary>
+    <div>1</div>
+  </details><br/>
+
+  <details>
+    <summary>【答えの解説】</summary>
+    <div>1. 4歳では夜尿が残ることは珍しくなく、発達を見守る対応が適切である。<br/>2. 夜間に無理に起こすことは睡眠を妨げ、根本的支援になりにくい。<br/>3. 過度なトイレ誘導は負担や緊張につながる。<br/>4. 年齢や症状から直ちに専門受診が必要とはいえない。<br/>11. 6か月の乳児。健診時に母親が「お兄ちゃんに比べてこの子はミルクの飲みが悪いです」と訴えた。児の身長と体重は月齢相当であった。対応で適切なのはどれか。<br/>1. お母さんの思い過ごしでしょう。<br/>2. ミルクを減らしてみましょう。<br/>3. お兄ちゃんと比べないでください。<br/>4. ミルクを飲むところを見てみましょう。</div>
+  </details><br/>
+
+  <details>
+    <summary>【選択肢の解説】</summary>
+    <div></div>
+  </details>
+
+  <br />
+  <input type="button" class="close" value="とじる" onclick="closeModal()">
+</div>
+
+<div id="pageMove"></div>
+
+<script src="shippei1.js"></script>
+<script src="answer.js"></script>
+<script src="../page_move/page_move.js"></script>
+</body>
+</html>

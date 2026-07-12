@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>小児_事後課題 58</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../page_move/page_move.css">
+</head>
+<body>
+<div class="LineUp">
+  問題 <span id="problemNumber" value="58"></span>
+  <input type="button" value="答え" onclick="showAnswer()">
+</div>
+
+<div class="box">
+  問題
+</div>
+
+<div id="correctMark">正解！</div>
+
+<ol>
+  
+</ol>
+
+<div class="button">
+  <input type="button" id="back" value="戻る" onclick="goBack(this)">
+  <input type="button" id="answerBtn" value="OK" onclick="oK()">
+  <input type="button" id="next" value="次へ" onclick="goNext(this)">
+</div>
+
+<br/>
+<div id="modal1" style="display: none;">
+  <details>
+    <summary>【答え】</summary>
+    <div>2</div>
+  </details><br/>
+
+  <details>
+    <summary>【答えの解説】</summary>
+    <div>1. 水痘も先天感染の問題はあるが、先天性難聴として代表的なのは風疹である。<br/>2. 妊娠初期の風疹感染は先天性風疹症候群を起こし、難聴の原因となる。<br/>3. 麻疹は母体合併症などが問題となるが、難聴の代表ではない。<br/>4. 流行性耳下腺炎は後天性難聴の原因となりうるが、妊娠初期感染による児の難聴としては風疹が代表である。<br/>59. 麻疹に関して正しいのはどれか。2つ選べ。<br/>1. 合併症として脳炎がある。<br/>2. 感染力は発疹期が最も強い。<br/>3. 効果的な抗ウイルス薬がある。<br/>4. 2回のワクチン定期接種が行われている。<br/>5. エンテロウイルスの感染によって発症する。</div>
+  </details><br/>
+
+  <details>
+    <summary>【選択肢の解説】</summary>
+    <div></div>
+  </details>
+
+  <br />
+  <input type="button" class="close" value="とじる" onclick="closeModal()">
+</div>
+
+<div id="pageMove"></div>
+
+<script src="shippei1.js"></script>
+<script src="answer.js"></script>
+<script src="../page_move/page_move.js"></script>
+</body>
+</html>

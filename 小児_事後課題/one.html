@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>小児_事後課題 1</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../page_move/page_move.css">
+</head>
+<body>
+<div class="LineUp">
+  問題 <span id="problemNumber" value="1"></span>
+  <input type="button" value="答え" onclick="showAnswer()">
+</div>
+
+<div class="box">
+  5歳ごろの児の病気のとらえ方として正しいものはどれか。
+</div>
+
+<div id="correctMark">正解！</div>
+
+<ol>
+  <li><input type="checkbox" name="checkbox" id="opt1" value="opt1"/>入院し、母親と離れることも病気が原因だと理解し、我慢できる</li><li><input type="checkbox" name="checkbox" id="opt2" value="opt2"/>病気を治すために必要な治療を理解し、積極的に参加できる</li><li><input type="checkbox" name="checkbox" id="opt3" value="opt3"/>病気が体の中で起こっていることを理解し、表現できる</li><li><input type="checkbox" name="checkbox" id="opt4" value="opt4"/>病気を自分の行いに対する罰だと考える</li>
+</ol>
+
+<div class="button">
+  <input type="button" id="back" value="戻る" onclick="goBack(this)">
+  <input type="button" id="answerBtn" value="OK" onclick="oK()">
+  <input type="button" id="next" value="次へ" onclick="goNext(this)">
+</div>
+
+<br/>
+<div id="modal1" style="display: none;">
+  <details>
+    <summary>【答え】</summary>
+    <div>4</div>
+  </details><br/>
+
+  <details>
+    <summary>【答えの解説】</summary>
+    <div>1. 5歳ごろでは入院や母親との分離を病気の原因と結びつけて十分に理解することは難しい。<br/>2. 治療の必要性を論理的に理解し主体的に参加するのは学童期以降に近い。<br/>3. 体内で病気が起こるという内的・生理的理解はまだ十分ではない。<br/>4. 幼児期は自己中心性や魔術的思考により、病気を自分の行為への罰ととらえやすい。<br/>2. 12歳の患児に行うプレパレーションとしてふさわしくないものはどれか。<br/>1. 病気の説明に親が同席するかを本人に選択してもらう<br/>2. 病気について人体のイラストなどを用いて説明する<br/>3. ぬいぐるみを用いて治療のデモンストレーションを行う<br/>4. 実際に使用する物品や機器を用いて説明する</div>
+  </details><br/>
+
+  <details>
+    <summary>【選択肢の解説】</summary>
+    <div></div>
+  </details>
+
+  <br />
+  <input type="button" class="close" value="とじる" onclick="closeModal()">
+</div>
+
+<div id="pageMove"></div>
+
+<script src="shippei1.js"></script>
+<script src="answer.js"></script>
+<script src="../page_move/page_move.js"></script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>小児_事後課題 3</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../page_move/page_move.css">
+</head>
+<body>
+<div class="LineUp">
+  問題 <span id="problemNumber" value="3"></span>
+  <input type="button" value="答え" onclick="showAnswer()">
+</div>
+
+<div class="box">
+  問題
+</div>
+
+<div id="correctMark">正解！</div>
+
+<ol>
+  
+</ol>
+
+<div class="button">
+  <input type="button" id="back" value="戻る" onclick="goBack(this)">
+  <input type="button" id="answerBtn" value="OK" onclick="oK()">
+  <input type="button" id="next" value="次へ" onclick="goNext(this)">
+</div>
+
+<br/>
+<div id="modal1" style="display: none;">
+  <details>
+    <summary>【答え】</summary>
+    <div>1</div>
+  </details><br/>
+
+  <details>
+    <summary>【答えの解説】</summary>
+    <div>1. 不安やストレスは泣く、怒るなどの情緒反応だけでなく、食欲低下、睡眠障害、腹痛などにも現れる。<br/>2. 子どもの病気は親の不安、きょうだいの寂しさ、家族役割の変化などを生じさせる。<br/>3. 情報を隠すのではなく、発達段階に合わせて正直に伝えることが重要である。<br/>4. プレパレーションは心理的準備を助ける援助であり、病気そのものを直接治癒させるものではない。<br/>4. 手術後に抗癌化学療法が予定されている4歳児が「おなかの悪いものを取ったら、おうちに帰れるの？」と尋ねてきた。対応として最も適切なのはどれか。<br/>1. そのとおりであると伝える。<br/>2. 話題を変えて気をそらせる。<br/>3. 手術の後に化学療法を行うことを伝える。<br/>4. 親からどのように説明されているかを尋ねる。</div>
+  </details><br/>
+
+  <details>
+    <summary>【選択肢の解説】</summary>
+    <div></div>
+  </details>
+
+  <br />
+  <input type="button" class="close" value="とじる" onclick="closeModal()">
+</div>
+
+<div id="pageMove"></div>
+
+<script src="shippei1.js"></script>
+<script src="answer.js"></script>
+<script src="../page_move/page_move.js"></script>
+</body>
+</html>

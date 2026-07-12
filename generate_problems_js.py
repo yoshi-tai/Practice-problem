@@ -96,52 +96,85 @@ def parse_markdown_problems(markdown_text: str) -> List[Dict[str, object]]:
 
 def parse_small_child_problems(markdown_text: str) -> List[Dict[str, object]]:
     problems: List[Dict[str, object]] = []
-    blocks = re.split(r'(?m)^回答番号', markdown_text)
-    if len(blocks) <= 1:
+    lines = [line.rstrip() for line in markdown_text.splitlines() if line.strip()]
+    if not lines:
         return problems
 
-    for index, block in enumerate(blocks[1:], start=1):
-        if not block.strip():
-            continue
-        lines = [line.rstrip() for line in block.splitlines() if line.strip()]
-        if not lines:
-            continue
+    marker_indexes = [index for index, line in enumerate(lines) if line.strip().startswith('回答番号')]
+    start_index = 0
 
-        answer_lines = []
-        option_lines = []
+    for marker_index in marker_indexes:
+        question_lines = lines[start_index:marker_index]
         explanation_lines = []
-        question_text = ''
+        next_marker_index = marker_index + 1
+        while next_marker_index < len(lines) and not lines[next_marker_index].strip().startswith('回答番号'):
+            explanation_lines.append(lines[next_marker_index])
+            next_marker_index += 1
 
-        for line in lines:
+        question_text = ''
+        options: List[Tuple[int, str]] = []
+        first_option_seen = False
+        for line in question_lines:
             stripped = line.strip()
             if not stripped:
                 continue
-            if not question_text:
+            option_match = re.match(r'^([0-9]+)\.\s*(.+)$', stripped)
+            if option_match:
+                option_number = normalize_number(option_match.group(1))
+                option_text = option_match.group(2).strip()
+                if not first_option_seen and option_number == 1:
+                    question_text = option_text
+                    first_option_seen = True
+                else:
+                    options.append((option_number, option_text))
+            else:
                 question_text = stripped
-                continue
-            if re.match(r'^([0-9]+)\.', stripped):
-                option_match = re.match(r'^([0-9]+)\.\s*(.+)$', stripped)
-                if option_match:
-                    option_lines.append((normalize_number(option_match.group(1)), option_match.group(2).strip()))
-                continue
-            if re.match(r'^[0-9]+[．.]\s*', stripped):
-                explanation_lines.append(stripped)
-                continue
-            if re.match(r'^回答番号', stripped):
-                continue
-            explanation_lines.append(stripped)
 
-        answer_match = re.search(r'([0-9、,０-９]+)', question_text)
+        question_text = re.sub(r'^#+\s*', '', question_text).strip()
+        question_text = question_text.replace('##', '').strip()
+        answer_match = re.search(r'([0-9、,０-９]+)', lines[marker_index].strip())
         answers: List[str] = []
         if answer_match:
             answers = [f'opt{normalize_number(v)}' for v in re.findall(r'\d+', answer_match.group(1))]
 
         problems.append({
-            'number': index,
-            'question_text': question_text,
+            'number': len(problems) + 1,
+            'question_text': re.sub(r'^\d+\.\s*', '', question_text).strip() or '問題',
             'answers': answers,
-            'options': option_lines,
-            'answer_explanation_lines': explanation_lines or ['解説はありません。'],
+            'options': options,
+            'answer_explanation_lines': [line.strip() for line in explanation_lines if line.strip()] or ['解説はありません。'],
+            'option_explanations': [],
+        })
+
+        start_index = next_marker_index
+
+    if start_index < len(lines):
+        question_lines = lines[start_index:]
+        question_text = ''
+        options: List[Tuple[int, str]] = []
+        first_option_seen = False
+        for line in question_lines:
+            stripped = line.strip()
+            option_match = re.match(r'^([0-9]+)\.\s*(.+)$', stripped)
+            if option_match:
+                option_number = normalize_number(option_match.group(1))
+                option_text = option_match.group(2).strip()
+                if not first_option_seen and option_number == 1:
+                    question_text = option_text
+                    first_option_seen = True
+                else:
+                    options.append((option_number, option_text))
+            else:
+                question_text = stripped
+
+        question_text = re.sub(r'^#+\s*', '', question_text).strip()
+        question_text = question_text.replace('##', '').strip()
+        problems.append({
+            'number': len(problems) + 1,
+            'question_text': re.sub(r'^\d+\.\s*', '', question_text).strip() or '問題',
+            'answers': [],
+            'options': options,
+            'answer_explanation_lines': ['解説はありません。'],
             'option_explanations': [],
         })
 

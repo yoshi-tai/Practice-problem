@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>小児_事後課題 69</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../page_move/page_move.css">
+</head>
+<body>
+<div class="LineUp">
+  問題 <span id="problemNumber" value="69"></span>
+  <input type="button" value="答え" onclick="showAnswer()">
+</div>
+
+<div class="box">
+  問題
+</div>
+
+<div id="correctMark">正解！</div>
+
+<ol>
+  
+</ol>
+
+<div class="button">
+  <input type="button" id="back" value="戻る" onclick="goBack(this)">
+  <input type="button" id="answerBtn" value="OK" onclick="oK()">
+  <input type="button" id="next" value="次へ" onclick="goNext(this)">
+</div>
+
+<br/>
+<div id="modal1" style="display: none;">
+  <details>
+    <summary>【答え】</summary>
+    <div>3</div>
+  </details><br/>
+
+  <details>
+    <summary>【答えの解説】</summary>
+    <div>1. 根拠のない励ましは不安や不信につながる。<br/>2. 無制限の視聴ではストレス対処として不十分である。<br/>3. 安静を守りながら遊びや気分転換を取り入れる支援が適切である。<br/>4. 付き添い延長だけでは児の活動制限によるストレスに対応できない。<br/>70. 流行性耳下腺炎で髄膜炎疑いの5歳男児。退院後の注意として父親への回答で適切なのはどれか。<br/>1. 「Aちゃんの精巣の腫れに注意してください」<br/>2. 「Aちゃんは退院後1週間は登園できません」<br/>3. 「Aちゃんの耳の聴こえ方に注意してください」<br/>4. 「AちゃんからBちゃんへの感染予防には明日までのワクチン接種が効果的です」</div>
+  </details><br/>
+
+  <details>
+    <summary>【選択肢の解説】</summary>
+    <div></div>
+  </details>
+
+  <br />
+  <input type="button" class="close" value="とじる" onclick="closeModal()">
+</div>
+
+<div id="pageMove"></div>
+
+<script src="shippei1.js"></script>
+<script src="answer.js"></script>
+<script src="../page_move/page_move.js"></script>
+</body>
+</html>
