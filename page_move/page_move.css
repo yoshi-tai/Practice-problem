@@ -11,10 +11,12 @@
 }
 
 .pageButtonArea {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 5px;
+  display: flex;              /* 子要素を横並びにする */
+  justify-content: center;   /* 子要素を水平方向の中央に配置する */
+  align-items: center;       /* 子要素を垂直方向の中央に揃える */
+  gap: 5px;                  /* 子要素同士の間隔を5pxにする */
+  width:100%;                  /*　親要素の幅に合わせる */
+
 }
 
 #pageButtons {
@@ -34,13 +36,18 @@
 }
 
 #prevGroupBtn,
-#nextGroupBtn {
-  min-width: 50px;
+#nextGroupBtn,
+#frontBtn,
+#nextBtn {
+  width: 50px;
   height: 40px;
+  box-sizing: border-box;
 }
 
 #prevGroupBtn:disabled,
-#nextGroupBtn:disabled {
+#nextGroupBtn:disabled,
+#frontBtn:disabled,
+#nextBtn:disabled {
   background-color: lightgray;
   cursor: default;
 }

@@ -86,6 +86,8 @@ function initPageMove() {
     const pageButtons = document.getElementById("pageButtons");
     
     const prevGroupBtn = document.getElementById("prevGroupBtn");
+    const frontBtn = document.getElementById("frontBtn");
+    const nextBtn = document.getElementById("nextBtn");
     const nextGroupBtn = document.getElementById("nextGroupBtn");
     
     const resolvedCurrentPage = Math.min(currentPage, totalPagesToShow || 1);
@@ -172,6 +174,38 @@ function initPageMove() {
         currentGroup++;
         
         render();
+        
+      }
+      
+    };
+
+    // < ボタン
+    frontBtn.disabled = (resolvedCurrentPage === 1 || totalPagesToShow <= 1);
+    
+    frontBtn.onclick = function() {
+      
+      if (resolvedCurrentPage > 1) {
+        
+        location.href =
+          pageBasePath +
+          fileNames[resolvedCurrentPage - 2] +
+          ".html";
+        
+      }
+      
+    };
+    
+    // > ボタン
+    nextBtn.disabled = (resolvedCurrentPage === totalPagesToShow || totalPagesToShow <= 1);
+    
+    nextBtn.onclick = function() {
+      
+      if (resolvedCurrentPage < totalPagesToShow) {
+        
+        location.href =
+          pageBasePath +
+          fileNames[resolvedCurrentPage] +
+          ".html";
         
       }
       
