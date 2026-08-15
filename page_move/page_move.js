@@ -69,17 +69,19 @@ function initPageMove() {
     ? currentPageValue
     : 1;
   
-  
   // ======================
-  // 「現在のページが、10ページ単位のどのグループに属しているかを計算」
+  // 画面幅を取得し、現在のページが何かを判定する
   // ======================
- 
-  // 画面幅を取得
-  const isMobile = window.innerWidth <= 768;
+
+  // ユーザーエージェントを取得
+  const userAgent = navigator.userAgent; 
+   // スマホ判定（画面幅が768px以下の場合もスマホとみなす）
+  const isMobile = /Mobile|Android|iPhone|iPad/.test(userAgent) || window.innerWidth <= 768;
 
   // スマホなら5個、PCなら10個表示
   const maxPageButtons = isMobile ? 5 : 10;
 
+  // 「現在のページが、10ページ単位のどのグループに属しているかを計算」
   let currentGroup = Math.floor((Math.min(currentPage, totalPages || 1) - 1) / maxPageButtons);
   
   render();
