@@ -46,6 +46,9 @@ function initPageMove() {
     : defaultFileNames;
   const pageBasePath = typeof window.pageBasePath === "string" ? window.pageBasePath : "";
   const configuredTotalPages = Number(window.customTotalPages);
+  
+  // 「設定された総ページ数が正しい1以上の数値ならそれを使う。ただし、実際に存在するファイル数を超えないようにする。
+  // そして最終的なページ数は最低0にする。」
   const totalPages = Math.max(
     0,
     Math.min(
@@ -68,13 +71,18 @@ function initPageMove() {
   
   
   // ======================
-  // 表示中グループ
+  // 「現在のページが、10ページ単位のどのグループに属しているかを計算」
   // ======================
-  let currentGroup = Math.floor((Math.min(currentPage, totalPages || 1) - 1) / 10);
-  
+ 
+  // 画面幅を取得
+  const isMobile = window.innerWidth <= 768;
+
+  // スマホなら5個、PCなら10個表示
+  const maxPageButtons = isMobile ? 5 : 10;
+
+  let currentGroup = Math.floor((Math.min(currentPage, totalPages || 1) - 1) / maxPageButtons);
   
   render();
-  
   
   // ======================
   // 描画処理
@@ -104,9 +112,9 @@ function initPageMove() {
       nextGroupBtn.disabled = true;
       return;
     }
-    
-    const start = currentGroup * 10 + 1;
-    let end = start + 9;
+   
+    const start = currentGroup * maxPageButtons + 1;
+    let end = start + maxPageButtons - 1;
     
     if (end > totalPagesToShow) {
       end = totalPagesToShow;
@@ -163,7 +171,7 @@ function initPageMove() {
     
     
     // >> ボタン
-    const maxGroup = Math.floor((totalPages - 1) / 10);
+    const maxGroup = Math.floor((totalPages - 1) / maxPageButtons);
     
     nextGroupBtn.disabled = (currentGroup === maxGroup || totalPagesToShow <= 1);
     
