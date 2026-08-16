@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>母性 11</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../page_move/page_move.css">
+</head>
+<body>
+<div class="LineUp">
+  問題 <span id="problemNumber" value="11"></span>
+  <input type="button" value="答え" onclick="showAnswer()">
+</div>
+
+<div class="box">
+  妊娠40週で破水した場合、臍帯脱出が最も起きやすいのはどれか。
+</div>
+
+<div id="correctMark">正解！</div>
+
+<ol>
+  <li><input type="checkbox" name="checkbox" id="1" value="opt1"/>単殿位</li>
+  <li><input type="checkbox" name="checkbox" id="2" value="opt2"/>不全足位</li>
+  <li><input type="checkbox" name="checkbox" id="3" value="opt3"/>頭位</li>
+  <li><input type="checkbox" name="checkbox" id="4" value="opt4"/>顔面位</li>
+</ol>
+
+<div class="button">
+  <input type="button" id="back" value="戻る" onclick="goBack(this)">
+  <input type="button" id="answerBtn" value="OK" onclick="oK()">
+  <input type="button" id="next" value="次へ" onclick="goNext(this)">
+</div>
+
+<br/>
+<div id="modal1" style="display: none;">
+  <details>
+    <summary>【答え】</summary>
+    <div>2</div>
+  </details><br/>
+
+  <details>
+    <summary>【答えの解説】</summary>
+    <div>不全足位では胎児先進部と骨盤との間に隙間ができやすく、臍帯脱出を起こしやすい。</div>
+  </details><br/>
+
+  <details>
+    <summary>【選択肢の解説】</summary>
+      <ul>
+        <li><strong>1</strong>: 単殿位では不全足位より臍帯脱出のリスクは低い。</li>
+        <li><strong>3</strong>: 頭位では胎児先進部が骨盤に適合しやすく、臍帯脱出のリスクは比較的低い。</li>
+        <li><strong>4</strong>: 顔面位でも起こる可能性はあるが、不全足位のほうが起こりやすい。</li>
+      </ul>
+  </details>
+
+  <br />
+  <input type="button" class="close" value="とじる" onclick="closeModal()">
+</div>
+
+<div id="pageMove"></div>
+
+<script src="shippei1.js"></script>
+<script src="answer.js"></script>
+<script src="../page_move/page_move.js"></script>
+</body>
+</html>

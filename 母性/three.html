@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>母性 3</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../page_move/page_move.css">
+</head>
+<body>
+<div class="LineUp">
+  問題 <span id="problemNumber" value="3"></span>
+  <input type="button" value="答え" onclick="showAnswer()">
+</div>
+
+<div class="box">
+  正期産となる出産時期はどれか。
+</div>
+
+<div id="correctMark">正解！</div>
+
+<ol>
+  <li><input type="checkbox" name="checkbox" id="1" value="opt1"/>妊娠35週0日から39週6日</li>
+  <li><input type="checkbox" name="checkbox" id="2" value="opt2"/>妊娠36週0日から40週6日</li>
+  <li><input type="checkbox" name="checkbox" id="3" value="opt3"/>妊娠37週0日から41週6日</li>
+  <li><input type="checkbox" name="checkbox" id="4" value="opt4"/>妊娠38週0日から42週6日</li>
+</ol>
+
+<div class="button">
+  <input type="button" id="back" value="戻る" onclick="goBack(this)">
+  <input type="button" id="answerBtn" value="OK" onclick="oK()">
+  <input type="button" id="next" value="次へ" onclick="goNext(this)">
+</div>
+
+<br/>
+<div id="modal1" style="display: none;">
+  <details>
+    <summary>【答え】</summary>
+    <div>3</div>
+  </details><br/>
+
+  <details>
+    <summary>【答えの解説】</summary>
+    <div>正期産は妊娠37週0日から妊娠41週6日までである。</div>
+  </details><br/>
+
+  <details>
+    <summary>【選択肢の解説】</summary>
+      <ul>
+        <li><strong>1</strong>: 妊娠35週0日は早産に該当する。</li>
+        <li><strong>2</strong>: 妊娠36週0日は早産に該当する。</li>
+        <li><strong>4</strong>: 妊娠42週以降は過期産に該当する。</li>
+      </ul>
+  </details>
+
+  <br />
+  <input type="button" class="close" value="とじる" onclick="closeModal()">
+</div>
+
+<div id="pageMove"></div>
+
+<script src="shippei1.js"></script>
+<script src="answer.js"></script>
+<script src="../page_move/page_move.js"></script>
+</body>
+</html>

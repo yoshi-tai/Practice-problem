@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>母性 17</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../page_move/page_move.css">
+</head>
+<body>
+<div class="LineUp">
+  問題 <span id="problemNumber" value="17"></span>
+  <input type="button" value="答え" onclick="showAnswer()">
+</div>
+
+<div class="box">
+  常位胎盤早期剥離のリスク因子はどれか。
+</div>
+
+<div id="correctMark">正解！</div>
+
+<ol>
+  <li><input type="checkbox" name="checkbox" id="1" value="opt1"/>肥満</li>
+  <li><input type="checkbox" name="checkbox" id="2" value="opt2"/>妊娠糖尿病</li>
+  <li><input type="checkbox" name="checkbox" id="3" value="opt3"/>帝王切開術の既往</li>
+  <li><input type="checkbox" name="checkbox" id="4" value="opt4"/>妊娠高血圧症候群</li>
+</ol>
+
+<div class="button">
+  <input type="button" id="back" value="戻る" onclick="goBack(this)">
+  <input type="button" id="answerBtn" value="OK" onclick="oK()">
+  <input type="button" id="next" value="次へ" onclick="goNext(this)">
+</div>
+
+<br/>
+<div id="modal1" style="display: none;">
+  <details>
+    <summary>【答え】</summary>
+    <div>4</div>
+  </details><br/>
+
+  <details>
+    <summary>【答えの解説】</summary>
+    <div>妊娠高血圧症候群は常位胎盤早期剥離の重要なリスク因子である。</div>
+  </details><br/>
+
+  <details>
+    <summary>【選択肢の解説】</summary>
+      <ul>
+        <li><strong>1</strong>: 肥満は常位胎盤早期剥離の代表的なリスク因子ではない。</li>
+        <li><strong>2</strong>: 妊娠糖尿病は代表的なリスク因子ではない。</li>
+        <li><strong>3</strong>: 帝王切開術の既往は前置胎盤などのリスクに関連する。</li>
+      </ul>
+  </details>
+
+  <br />
+  <input type="button" class="close" value="とじる" onclick="closeModal()">
+</div>
+
+<div id="pageMove"></div>
+
+<script src="shippei1.js"></script>
+<script src="answer.js"></script>
+<script src="../page_move/page_move.js"></script>
+</body>
+</html>

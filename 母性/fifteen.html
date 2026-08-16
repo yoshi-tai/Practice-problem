@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>母性 15</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../page_move/page_move.css">
+</head>
+<body>
+<div class="LineUp">
+  問題 <span id="problemNumber" value="15"></span>
+  <input type="button" value="答え" onclick="showAnswer()">
+</div>
+
+<div class="box">
+  降圧剤の内服が開始された。入院3日、血圧156/96mmHg、下肢浮腫＋、尿蛋白＋、尿糖－、尿量1,200mLであった。この妊婦に必要なのはどれか。
+</div>
+
+<div id="correctMark">正解！</div>
+
+<ol>
+  <li><input type="checkbox" name="checkbox" id="1" value="opt1"/>安静の保持</li>
+  <li><input type="checkbox" name="checkbox" id="2" value="opt2"/>水分制限</li>
+  <li><input type="checkbox" name="checkbox" id="3" value="opt3"/>低たんぱく食</li>
+  <li><input type="checkbox" name="checkbox" id="4" value="opt4"/>乳房の手当</li>
+</ol>
+
+<div class="button">
+  <input type="button" id="back" value="戻る" onclick="goBack(this)">
+  <input type="button" id="answerBtn" value="OK" onclick="oK()">
+  <input type="button" id="next" value="次へ" onclick="goNext(this)">
+</div>
+
+<br/>
+<div id="modal1" style="display: none;">
+  <details>
+    <summary>【答え】</summary>
+    <div>1</div>
+  </details><br/>
+
+  <details>
+    <summary>【答えの解説】</summary>
+    <div>妊娠高血圧症候群では血圧や母体・胎児の状態を観察しながら安静を保持することが重要である。</div>
+  </details><br/>
+
+  <details>
+    <summary>【選択肢の解説】</summary>
+      <ul>
+        <li><strong>2</strong>: 一律に水分制限を行うものではない。</li>
+        <li><strong>3</strong>: 低たんぱく食は適切ではなく、必要な栄養を確保する。</li>
+        <li><strong>4</strong>: 乳房の手当はこの時点での優先的な看護ではない。</li>
+      </ul>
+  </details>
+
+  <br />
+  <input type="button" class="close" value="とじる" onclick="closeModal()">
+</div>
+
+<div id="pageMove"></div>
+
+<script src="shippei1.js"></script>
+<script src="answer.js"></script>
+<script src="../page_move/page_move.js"></script>
+</body>
+</html>

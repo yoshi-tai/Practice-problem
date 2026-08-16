@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>母性 16</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../page_move/page_move.css">
+</head>
+<body>
+<div class="LineUp">
+  問題 <span id="problemNumber" value="16"></span>
+  <input type="button" value="答え" onclick="showAnswer()">
+</div>
+
+<div class="box">
+  前置胎盤と診断されていた妊娠36週の妊婦に陣痛が発来した。適切でないのはどれか。
+</div>
+
+<div id="correctMark">正解！</div>
+
+<ol>
+  <li><input type="checkbox" name="checkbox" id="1" value="opt1"/>胎児心拍モニタリングを開始する</li>
+  <li><input type="checkbox" name="checkbox" id="2" value="opt2"/>バイタルサインを観察する</li>
+  <li><input type="checkbox" name="checkbox" id="3" value="opt3"/>家族へ連絡する</li>
+  <li><input type="checkbox" name="checkbox" id="4" value="opt4"/>トイレへの歩行を許可する</li>
+</ol>
+
+<div class="button">
+  <input type="button" id="back" value="戻る" onclick="goBack(this)">
+  <input type="button" id="answerBtn" value="OK" onclick="oK()">
+  <input type="button" id="next" value="次へ" onclick="goNext(this)">
+</div>
+
+<br/>
+<div id="modal1" style="display: none;">
+  <details>
+    <summary>【答え】</summary>
+    <div>4</div>
+  </details><br/>
+
+  <details>
+    <summary>【答えの解説】</summary>
+    <div>前置胎盤では出血を誘発する可能性があるため、歩行は避ける。</div>
+  </details><br/>
+
+  <details>
+    <summary>【選択肢の解説】</summary>
+      <ul>
+        <li><strong>1</strong>: 胎児の状態を把握するため胎児心拍モニタリングを行う。</li>
+        <li><strong>2</strong>: 出血や母体の状態を把握するためバイタルサインを観察する。</li>
+        <li><strong>3</strong>: 緊急帝王切開などの可能性もあるため、家族への連絡を行う。</li>
+      </ul>
+  </details>
+
+  <br />
+  <input type="button" class="close" value="とじる" onclick="closeModal()">
+</div>
+
+<div id="pageMove"></div>
+
+<script src="shippei1.js"></script>
+<script src="answer.js"></script>
+<script src="../page_move/page_move.js"></script>
+</body>
+</html>

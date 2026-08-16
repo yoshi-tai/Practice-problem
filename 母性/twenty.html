@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>母性 20</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../page_move/page_move.css">
+</head>
+<body>
+<div class="LineUp">
+  問題 <span id="problemNumber" value="20"></span>
+  <input type="button" value="答え" onclick="showAnswer()">
+</div>
+
+<div class="box">
+  前置胎盤について正しいのはどれか。
+</div>
+
+<div id="correctMark">正解！</div>
+
+<ol>
+  <li><input type="checkbox" name="checkbox" id="1" value="opt1"/>出血は主に内出血である</li>
+  <li><input type="checkbox" name="checkbox" id="2" value="opt2"/>妊娠高血圧症候群に合併する</li>
+  <li><input type="checkbox" name="checkbox" id="3" value="opt3"/>出血は痛みを伴わない場合が多い</li>
+  <li><input type="checkbox" name="checkbox" id="4" value="opt4"/>胎盤の下縁が内子宮口に達しないものをいう</li>
+</ol>
+
+<div class="button">
+  <input type="button" id="back" value="戻る" onclick="goBack(this)">
+  <input type="button" id="answerBtn" value="OK" onclick="oK()">
+  <input type="button" id="next" value="次へ" onclick="goNext(this)">
+</div>
+
+<br/>
+<div id="modal1" style="display: none;">
+  <details>
+    <summary>【答え】</summary>
+    <div>3</div>
+  </details><br/>
+
+  <details>
+    <summary>【答えの解説】</summary>
+    <div>前置胎盤では、妊娠後期に突然の無痛性出血を起こすことが多い。</div>
+  </details><br/>
+
+  <details>
+    <summary>【選択肢の解説】</summary>
+      <ul>
+        <li><strong>1</strong>: 前置胎盤では主に無痛性の外出血がみられる。</li>
+        <li><strong>2</strong>: 妊娠高血圧症候群との関連が強いのは常位胎盤早期剥離である。</li>
+        <li><strong>4</strong>: 胎盤が内子宮口にかかる、または近接する状態が前置胎盤である。</li>
+      </ul>
+  </details>
+
+  <br />
+  <input type="button" class="close" value="とじる" onclick="closeModal()">
+</div>
+
+<div id="pageMove"></div>
+
+<script src="shippei1.js"></script>
+<script src="answer.js"></script>
+<script src="../page_move/page_move.js"></script>
+</body>
+</html>

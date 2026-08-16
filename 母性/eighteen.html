@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>母性 18</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../page_move/page_move.css">
+</head>
+<body>
+<div class="LineUp">
+  問題 <span id="problemNumber" value="18"></span>
+  <input type="button" value="答え" onclick="showAnswer()">
+</div>
+
+<div class="box">
+  妊娠高血圧症候群について正しいのはどれか。1つ選べ。
+</div>
+
+<div id="correctMark">正解！</div>
+
+<ol>
+  <li><input type="checkbox" name="checkbox" id="1" value="opt1"/>有酸素運動で軽快する</li>
+  <li><input type="checkbox" name="checkbox" id="2" value="opt2"/>高たんぱく食で軽快する</li>
+  <li><input type="checkbox" name="checkbox" id="3" value="opt3"/>肥満妊婦に生じやすい</li>
+  <li><input type="checkbox" name="checkbox" id="4" value="opt4"/>病型の一つとして子癇がある</li>
+</ol>
+
+<div class="button">
+  <input type="button" id="back" value="戻る" onclick="goBack(this)">
+  <input type="button" id="answerBtn" value="OK" onclick="oK()">
+  <input type="button" id="next" value="次へ" onclick="goNext(this)">
+</div>
+
+<br/>
+<div id="modal1" style="display: none;">
+  <details>
+    <summary>【答え】</summary>
+    <div>3</div>
+  </details><br/>
+
+  <details>
+    <summary>【答えの解説】</summary>
+    <div>肥満は妊娠高血圧症候群のリスク因子の一つである。</div>
+  </details><br/>
+
+  <details>
+    <summary>【選択肢の解説】</summary>
+      <ul>
+        <li><strong>1</strong>: 有酸素運動によって妊娠高血圧症候群を治療するものではない。</li>
+        <li><strong>2</strong>: 高たんぱく食によって軽快するとはいえない。</li>
+        <li><strong>4</strong>: 子癇は妊娠高血圧症候群の病型ではなく、重症化した際にみられる合併症である。</li>
+      </ul>
+  </details>
+
+  <br />
+  <input type="button" class="close" value="とじる" onclick="closeModal()">
+</div>
+
+<div id="pageMove"></div>
+
+<script src="shippei1.js"></script>
+<script src="answer.js"></script>
+<script src="../page_move/page_move.js"></script>
+</body>
+</html>

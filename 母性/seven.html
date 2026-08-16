@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>母性 7</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../page_move/page_move.css">
+</head>
+<body>
+<div class="LineUp">
+  問題 <span id="problemNumber" value="7"></span>
+  <input type="button" value="答え" onclick="showAnswer()">
+</div>
+
+<div class="box">
+  産褥期に血栓性静脈炎を最も起こしやすいのはどれか。
+</div>
+
+<div id="correctMark">正解！</div>
+
+<ol>
+  <li><input type="checkbox" name="checkbox" id="1" value="opt1"/>妊娠末期の鉄欠乏性貧血</li>
+  <li><input type="checkbox" name="checkbox" id="2" value="opt2"/>遷延分娩による排尿障害</li>
+  <li><input type="checkbox" name="checkbox" id="3" value="opt3"/>頸管裂傷による分娩時出血</li>
+  <li><input type="checkbox" name="checkbox" id="4" value="opt4"/>帝王切開術による離床遅延</li>
+</ol>
+
+<div class="button">
+  <input type="button" id="back" value="戻る" onclick="goBack(this)">
+  <input type="button" id="answerBtn" value="OK" onclick="oK()">
+  <input type="button" id="next" value="次へ" onclick="goNext(this)">
+</div>
+
+<br/>
+<div id="modal1" style="display: none;">
+  <details>
+    <summary>【答え】</summary>
+    <div>4</div>
+  </details><br/>
+
+  <details>
+    <summary>【答えの解説】</summary>
+    <div>帝王切開術後の離床遅延は血流停滞を招き、血栓症のリスクを高める。</div>
+  </details><br/>
+
+  <details>
+    <summary>【選択肢の解説】</summary>
+      <ul>
+        <li><strong>1</strong>: 鉄欠乏性貧血は血栓性静脈炎の直接的な主因ではない。</li>
+        <li><strong>2</strong>: 排尿障害は血栓性静脈炎の主要なリスク因子ではない。</li>
+        <li><strong>3</strong>: 分娩時出血は貧血などを引き起こすが、最も直接的なリスクとはいえない。</li>
+      </ul>
+  </details>
+
+  <br />
+  <input type="button" class="close" value="とじる" onclick="closeModal()">
+</div>
+
+<div id="pageMove"></div>
+
+<script src="shippei1.js"></script>
+<script src="answer.js"></script>
+<script src="../page_move/page_move.js"></script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>母性 21</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../page_move/page_move.css">
+</head>
+<body>
+<div class="LineUp">
+  問題 <span id="problemNumber" value="21"></span>
+  <input type="button" value="答え" onclick="showAnswer()">
+</div>
+
+<div class="box">
+  妊娠34週、前置胎盤の妊婦、最も注目すべき観察項目はどれか。
+</div>
+
+<div id="correctMark">正解！</div>
+
+<ol>
+  <li><input type="checkbox" name="checkbox" id="1" value="opt1"/>出血傾向</li>
+  <li><input type="checkbox" name="checkbox" id="2" value="opt2"/>断続的な外出血</li>
+  <li><input type="checkbox" name="checkbox" id="3" value="opt3"/>急激な子宮底の上昇</li>
+  <li><input type="checkbox" name="checkbox" id="4" value="opt4"/>子宮収縮と無関係な腹部圧痛</li>
+</ol>
+
+<div class="button">
+  <input type="button" id="back" value="戻る" onclick="goBack(this)">
+  <input type="button" id="answerBtn" value="OK" onclick="oK()">
+  <input type="button" id="next" value="次へ" onclick="goNext(this)">
+</div>
+
+<br/>
+<div id="modal1" style="display: none;">
+  <details>
+    <summary>【答え】</summary>
+    <div>2</div>
+  </details><br/>
+
+  <details>
+    <summary>【答えの解説】</summary>
+    <div>前置胎盤では突然の無痛性外出血を繰り返すことがあるため、出血の量や性状を注意深く観察する。</div>
+  </details><br/>
+
+  <details>
+    <summary>【選択肢の解説】</summary>
+      <ul>
+        <li><strong>1</strong>: 出血の有無は重要だが、前置胎盤では特に外出血の観察が重要である。</li>
+        <li><strong>3</strong>: 急激な子宮底の上昇は前置胎盤の典型的な所見ではない。</li>
+        <li><strong>4</strong>: 腹部圧痛は常位胎盤早期剥離などでみられる所見であり、前置胎盤の典型ではない。</li>
+      </ul>
+  </details>
+
+  <br />
+  <input type="button" class="close" value="とじる" onclick="closeModal()">
+</div>
+
+<div id="pageMove"></div>
+
+<script src="shippei1.js"></script>
+<script src="answer.js"></script>
+<script src="../page_move/page_move.js"></script>
+</body>
+</html>

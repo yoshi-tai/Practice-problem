@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>母性 23</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../page_move/page_move.css">
+</head>
+<body>
+<div class="LineUp">
+  問題 <span id="problemNumber" value="23"></span>
+  <input type="button" value="答え" onclick="showAnswer()">
+</div>
+
+<div class="box">
+  Aさんは入院し、子宮収縮抑制薬の点滴静脈内注射が開始された。入院の翌日の朝、1時間に2～3回の不規則な子宮収縮はあるが痛みはない、性器出血はない、子宮口は閉鎖している。体温37.1度、脈拍88/分、血圧130/76mmHg。この時点の看護計画として最も適切なのはどれか。
+</div>
+
+<div id="correctMark">正解！</div>
+
+<ol>
+  <li><input type="checkbox" name="checkbox" id="1" value="opt1"/>食事は流動食とする</li>
+  <li><input type="checkbox" name="checkbox" id="2" value="opt2"/>清潔ケアは清拭とする</li>
+  <li><input type="checkbox" name="checkbox" id="3" value="opt3"/>排尿は毎回導尿とする</li>
+  <li><input type="checkbox" name="checkbox" id="4" value="opt4"/>血圧を継続モニタリングする</li>
+</ol>
+
+<div class="button">
+  <input type="button" id="back" value="戻る" onclick="goBack(this)">
+  <input type="button" id="answerBtn" value="OK" onclick="oK()">
+  <input type="button" id="next" value="次へ" onclick="goNext(this)">
+</div>
+
+<br/>
+<div id="modal1" style="display: none;">
+  <details>
+    <summary>【答え】</summary>
+    <div>2</div>
+  </details><br/>
+
+  <details>
+    <summary>【答えの解説】</summary>
+    <div>安静を保ちながら清潔を維持するため、清拭による清潔ケアが適切である。</div>
+  </details><br/>
+
+  <details>
+    <summary>【選択肢の解説】</summary>
+      <ul>
+        <li><strong>1</strong>: 切迫早産だからといって、食事を流動食にする必要はない。</li>
+        <li><strong>3</strong>: 自力排尿が可能であれば、毎回導尿する必要はない。</li>
+        <li><strong>4</strong>: 血圧測定は必要だが、この時点での看護計画として最も適切なのは清拭である。</li>
+      </ul>
+  </details>
+
+  <br />
+  <input type="button" class="close" value="とじる" onclick="closeModal()">
+</div>
+
+<div id="pageMove"></div>
+
+<script src="shippei1.js"></script>
+<script src="answer.js"></script>
+<script src="../page_move/page_move.js"></script>
+</body>
+</html>

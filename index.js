@@ -69,3 +69,14 @@ function childTask() {
     location.href = "小児_事後課題/one.html";
   }, 2000);
 }
+
+/*
+ *母性 ボタン
+ */
+function mother() {
+  const btn = document.getElementById("mother");
+  btn.value = "無理しないでね！";
+  setTimeout(function() {
+    location.href = "母性/one.html";
+  }, 2000);
+}

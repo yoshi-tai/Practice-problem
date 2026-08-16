@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>母性 5</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../page_move/page_move.css">
+</head>
+<body>
+<div class="LineUp">
+  問題 <span id="problemNumber" value="5"></span>
+  <input type="button" value="答え" onclick="showAnswer()">
+</div>
+
+<div class="box">
+  午後2時、体重3050gの児を分娩した。1分後のApgarスコアは6点で口鼻腔吸引が行われた。5分後のApgarスコアは9点、児に最も起こりえるのはどれか。
+</div>
+
+<div id="correctMark">正解！</div>
+
+<ol>
+  <li><input type="checkbox" name="checkbox" id="1" value="opt1"/>上気道閉塞</li>
+  <li><input type="checkbox" name="checkbox" id="2" value="opt2"/>低酸素性虚血性脳症</li>
+  <li><input type="checkbox" name="checkbox" id="3" value="opt3"/>胎便吸引症候群（MAS）</li>
+  <li><input type="checkbox" name="checkbox" id="4" value="opt4"/>呼吸窮迫症候群（RDS）</li>
+</ol>
+
+<div class="button">
+  <input type="button" id="back" value="戻る" onclick="goBack(this)">
+  <input type="button" id="answerBtn" value="OK" onclick="oK()">
+  <input type="button" id="next" value="次へ" onclick="goNext(this)">
+</div>
+
+<br/>
+<div id="modal1" style="display: none;">
+  <details>
+    <summary>【答え】</summary>
+    <div>3</div>
+  </details><br/>
+
+  <details>
+    <summary>【答えの解説】</summary>
+    <div>胎便混入羊水があった場合、胎便を吸引することで胎便吸引症候群を起こす可能性がある。</div>
+  </details><br/>
+
+  <details>
+    <summary>【選択肢の解説】</summary>
+      <ul>
+        <li><strong>1</strong>: 口鼻腔吸引が行われており、現時点で最も起こりやすいとはいえない。</li>
+        <li><strong>2</strong>: 5分後のApgarスコアが9点であり、低酸素性虚血性脳症を強く疑う状況ではない。</li>
+        <li><strong>4</strong>: 呼吸窮迫症候群は主に早産児に多く、正期産児では起こりにくい。</li>
+      </ul>
+  </details>
+
+  <br />
+  <input type="button" class="close" value="とじる" onclick="closeModal()">
+</div>
+
+<div id="pageMove"></div>
+
+<script src="shippei1.js"></script>
+<script src="answer.js"></script>
+<script src="../page_move/page_move.js"></script>
+</body>
+</html>
