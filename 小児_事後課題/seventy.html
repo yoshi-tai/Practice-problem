@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>小児_事後課題 70</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../page_move/page_move.css">
+</head>
+<body>
+<div class="LineUp">
+  問題 <span id="problemNumber" value="70"></span>
+  <input type="button" value="答え" onclick="showAnswer()">
+</div>
+
+<div class="box">
+  流行性耳下腺炎で髄膜炎疑いの5歳男児。退院後の注意として父親への回答で適切なのはどれか。
+</div>
+
+<div style="margin: 0.75rem 0 1rem; padding: 0.7rem 1rem; border-left: 4px solid #5a8dee; background: #f4f8ff; border-radius: 4px; line-height: 1.6;">
+  この問題では、流行性耳下腺炎で髄膜炎疑いの5歳男児。退院後の注意として父親への回答で適切なのはどれか。という視点から看護のポイントを整理して確認します。
+</div>
+
+<div id="correctMark">正解！</div>
+
+<ol>
+  <li><input type="checkbox" name="checkbox" id="opt1" value="opt1"/>「Aちゃんの精巣の腫れに注意してください」</li>
+  <li><input type="checkbox" name="checkbox" id="opt2" value="opt2"/>「Aちゃんは退院後1週間は登園できません」</li>
+  <li><input type="checkbox" name="checkbox" id="opt3" value="opt3"/>「Aちゃんの耳の聴こえ方に注意してください」</li>
+  <li><input type="checkbox" name="checkbox" id="opt4" value="opt4"/>「AちゃんからBちゃんへの感染予防には明日までのワクチン接種が効果的です」</li>
+</ol>
+
+<div class="button">
+  <input type="button" id="back" value="戻る" onclick="goBack(this)">
+  <input type="button" id="answerBtn" value="OK" onclick="oK()">
+  <input type="button" id="next" value="次へ" onclick="goNext(this)">
+</div>
+
+<br/>
+<div id="modal1" style="display: none;">
+  <details>
+    <summary>【答え】</summary>
+    <div>3</div>
+  </details><br/>
+
+  <details>
+    <summary>【答えの解説】</summary>
+    <div><div>精巣炎は思春期以降で問題になりやすく、5歳では最優先ではない。</div><div>登園停止は「耳下腺などの腫脹出現後5日を経過し、全身状態が良好」などを基準に判断する。</div><div>流行性耳下腺炎では難聴が合併することがあり、聴こえ方に注意する。</div><div>曝露後のワクチン接種で確実な感染予防効果は期待しにくい。</div></div>
+  </details><br/>
+
+  <details>
+    <summary>【選択肢の解説】</summary>
+    <ul>
+        <li><strong>1</strong>：精巣炎は思春期以降で問題になりやすく、5歳では最優先ではない。</li>
+        <li><strong>2</strong>：登園停止は「耳下腺などの腫脹出現後5日を経過し、全身状態が良好」などを基準に判断する。</li>
+        <li><strong>3</strong>：流行性耳下腺炎では難聴が合併することがあり、聴こえ方に注意する。</li>
+        <li><strong>4</strong>：曝露後のワクチン接種で確実な感染予防効果は期待しにくい。</li>
+    </ul>
+  </details>
+
+  <br />
+  <input type="button" class="close" value="とじる" onclick="closeModal()">
+</div>
+
+<div id="pageMove"></div>
+
+<script src="shippei1.js"></script>
+<script src="answer.js"></script>
+<script src="../page_move/page_move.js"></script>
+</body>
+</html>

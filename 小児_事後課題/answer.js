@@ -2,7 +2,7 @@
 const problems = {
   1: { correct: ['opt4'] },
   2: { correct: ['opt3'] },
-  3: { correct: ['opt1'] },
+  3: { correct: [] },
   4: { correct: ['opt4'] },
   5: { correct: ['opt3'] },
   6: { correct: ['opt4'] },

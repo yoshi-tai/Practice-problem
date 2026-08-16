@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>小児_事後課題 63</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../page_move/page_move.css">
+</head>
+<body>
+<div class="LineUp">
+  問題 <span id="problemNumber" value="63"></span>
+  <input type="button" value="答え" onclick="showAnswer()">
+</div>
+
+<div class="box">
+  風疹について正しいものはどれか。
+</div>
+
+<div style="margin: 0.75rem 0 1rem; padding: 0.7rem 1rem; border-left: 4px solid #5a8dee; background: #f4f8ff; border-radius: 4px; line-height: 1.6;">
+  この問題では、風疹について正しいものはどれか。という視点から看護のポイントを整理して確認します。
+</div>
+
+<div id="correctMark">正解！</div>
+
+<ol>
+  <li><input type="checkbox" name="checkbox" id="opt1" value="opt1"/>発疹は四肢から体幹、顔の順に出現する。</li>
+  <li><input type="checkbox" name="checkbox" id="opt2" value="opt2"/>発疹は赤くてかゆみを伴う。</li>
+  <li><input type="checkbox" name="checkbox" id="opt3" value="opt3"/>発症すると白血球が急激に増加する。</li>
+  <li><input type="checkbox" name="checkbox" id="opt4" value="opt4"/>急性期は水分の摂取を制限する。</li>
+</ol>
+
+<div class="button">
+  <input type="button" id="back" value="戻る" onclick="goBack(this)">
+  <input type="button" id="answerBtn" value="OK" onclick="oK()">
+  <input type="button" id="next" value="次へ" onclick="goNext(this)">
+</div>
+
+<br/>
+<div id="modal1" style="display: none;">
+  <details>
+    <summary>【答え】</summary>
+    <div>2</div>
+  </details><br/>
+
+  <details>
+    <summary>【答えの解説】</summary>
+    <div><div>風疹の発疹は顔から体幹・四肢へ広がることが多い。</div><div>淡紅色の発疹で、かゆみを伴うことがある。</div><div>白血球は減少傾向を示すことがある。</div><div>水分制限は通常必要ない。</div></div>
+  </details><br/>
+
+  <details>
+    <summary>【選択肢の解説】</summary>
+    <ul>
+        <li><strong>1</strong>：風疹の発疹は顔から体幹・四肢へ広がることが多い。</li>
+        <li><strong>2</strong>：淡紅色の発疹で、かゆみを伴うことがある。</li>
+        <li><strong>3</strong>：白血球は減少傾向を示すことがある。</li>
+        <li><strong>4</strong>：水分制限は通常必要ない。</li>
+    </ul>
+  </details>
+
+  <br />
+  <input type="button" class="close" value="とじる" onclick="closeModal()">
+</div>
+
+<div id="pageMove"></div>
+
+<script src="shippei1.js"></script>
+<script src="answer.js"></script>
+<script src="../page_move/page_move.js"></script>
+</body>
+</html>

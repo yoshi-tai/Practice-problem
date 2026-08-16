@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>小児_事後課題 69</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../page_move/page_move.css">
+</head>
+<body>
+<div class="LineUp">
+  問題 <span id="problemNumber" value="69"></span>
+  <input type="button" value="答え" onclick="showAnswer()">
+</div>
+
+<div class="box">
+  入院1週、床上安静が続きイライラしている7歳女児への発言で適切なのはどれか。
+</div>
+
+<div style="margin: 0.75rem 0 1rem; padding: 0.7rem 1rem; border-left: 4px solid #5a8dee; background: #f4f8ff; border-radius: 4px; line-height: 1.6;">
+  この問題では、入院1週、床上安静が続きイライラしている7歳女児への発言で適切なのはどれか。という視点から看護のポイントを整理して確認します。
+</div>
+
+<div id="correctMark">正解！</div>
+
+<ol>
+  <li><input type="checkbox" name="checkbox" id="opt1" value="opt1"/>「すぐに退院できるから頑張ろう」</li>
+  <li><input type="checkbox" name="checkbox" id="opt2" value="opt2"/>「好きなだけテレビや動画を観ていいよ」</li>
+  <li><input type="checkbox" name="checkbox" id="opt3" value="opt3"/>「ベッドに寝たままプレイルームに行こう」</li>
+  <li><input type="checkbox" name="checkbox" id="opt4" value="opt4"/>「夕食後もお母さんに付き添ってもらおう」</li>
+</ol>
+
+<div class="button">
+  <input type="button" id="back" value="戻る" onclick="goBack(this)">
+  <input type="button" id="answerBtn" value="OK" onclick="oK()">
+  <input type="button" id="next" value="次へ" onclick="goNext(this)">
+</div>
+
+<br/>
+<div id="modal1" style="display: none;">
+  <details>
+    <summary>【答え】</summary>
+    <div>3</div>
+  </details><br/>
+
+  <details>
+    <summary>【答えの解説】</summary>
+    <div><div>根拠のない励ましは不安や不信につながる。</div><div>無制限の視聴ではストレス対処として不十分である。</div><div>安静を守りながら遊びや気分転換を取り入れる支援が適切である。</div><div>付き添い延長だけでは児の活動制限によるストレスに対応できない。</div></div>
+  </details><br/>
+
+  <details>
+    <summary>【選択肢の解説】</summary>
+    <ul>
+        <li><strong>1</strong>：根拠のない励ましは不安や不信につながる。</li>
+        <li><strong>2</strong>：無制限の視聴ではストレス対処として不十分である。</li>
+        <li><strong>3</strong>：安静を守りながら遊びや気分転換を取り入れる支援が適切である。</li>
+        <li><strong>4</strong>：付き添い延長だけでは児の活動制限によるストレスに対応できない。</li>
+    </ul>
+  </details>
+
+  <br />
+  <input type="button" class="close" value="とじる" onclick="closeModal()">
+</div>
+
+<div id="pageMove"></div>
+
+<script src="shippei1.js"></script>
+<script src="answer.js"></script>
+<script src="../page_move/page_move.js"></script>
+</body>
+</html>

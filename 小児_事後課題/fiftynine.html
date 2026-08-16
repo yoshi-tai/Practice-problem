@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>小児_事後課題 59</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../page_move/page_move.css">
+</head>
+<body>
+<div class="LineUp">
+  問題 <span id="problemNumber" value="59"></span>
+  <input type="button" value="答え" onclick="showAnswer()">
+</div>
+
+<div class="box">
+  麻疹に関して正しいのはどれか。2つ選べ。
+</div>
+
+<div style="margin: 0.75rem 0 1rem; padding: 0.7rem 1rem; border-left: 4px solid #5a8dee; background: #f4f8ff; border-radius: 4px; line-height: 1.6;">
+  この問題では、麻疹に関して正しいのはどれか。2つ選べ。という視点から看護のポイントを整理して確認します。
+</div>
+
+<div id="correctMark">正解！</div>
+
+<ol>
+  <li><input type="checkbox" name="checkbox" id="opt1" value="opt1"/>合併症として脳炎がある。</li>
+  <li><input type="checkbox" name="checkbox" id="opt2" value="opt2"/>感染力は発疹期が最も強い。</li>
+  <li><input type="checkbox" name="checkbox" id="opt3" value="opt3"/>効果的な抗ウイルス薬がある。</li>
+  <li><input type="checkbox" name="checkbox" id="opt4" value="opt4"/>2回のワクチン定期接種が行われている。</li>
+  <li><input type="checkbox" name="checkbox" id="opt5" value="opt5"/>エンテロウイルスの感染によって発症する。</li>
+</ol>
+
+<div class="button">
+  <input type="button" id="back" value="戻る" onclick="goBack(this)">
+  <input type="button" id="answerBtn" value="OK" onclick="oK()">
+  <input type="button" id="next" value="次へ" onclick="goNext(this)">
+</div>
+
+<br/>
+<div id="modal1" style="display: none;">
+  <details>
+    <summary>【答え】</summary>
+    <div>1、4</div>
+  </details><br/>
+
+  <details>
+    <summary>【答えの解説】</summary>
+    <div><div>麻疹では肺炎や脳炎などの合併症がある。</div><div>感染力は発疹前後に強いが、選択肢中では誤りとして扱われる。</div><div>麻疹に特異的で効果的な抗ウイルス薬は一般的ではない。</div><div>麻疹風疹混合ワクチンなどで2回定期接種が行われる。</div><div>麻疹は麻疹ウイルスによる。</div></div>
+  </details><br/>
+
+  <details>
+    <summary>【選択肢の解説】</summary>
+    <ul>
+        <li><strong>1</strong>：麻疹では肺炎や脳炎などの合併症がある。</li>
+        <li><strong>2</strong>：感染力は発疹前後に強いが、選択肢中では誤りとして扱われる。</li>
+        <li><strong>3</strong>：麻疹に特異的で効果的な抗ウイルス薬は一般的ではない。</li>
+        <li><strong>4</strong>：麻疹風疹混合ワクチンなどで2回定期接種が行われる。</li>
+        <li><strong>5</strong>：麻疹は麻疹ウイルスによる。</li>
+    </ul>
+  </details>
+
+  <br />
+  <input type="button" class="close" value="とじる" onclick="closeModal()">
+</div>
+
+<div id="pageMove"></div>
+
+<script src="shippei1.js"></script>
+<script src="answer.js"></script>
+<script src="../page_move/page_move.js"></script>
+</body>
+</html>

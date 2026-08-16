@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>小児_事後課題 67</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../page_move/page_move.css">
+</head>
+<body>
+<div class="LineUp">
+  問題 <span id="problemNumber" value="67"></span>
+  <input type="button" value="答え" onclick="showAnswer()">
+</div>
+
+<div class="box">
+  溶連菌感染後急性糸球体腎炎で入院した7歳女児。入院時の看護計画で適切なのはどれか。
+</div>
+
+<div style="margin: 0.75rem 0 1rem; padding: 0.7rem 1rem; border-left: 4px solid #5a8dee; background: #f4f8ff; border-radius: 4px; line-height: 1.6;">
+  この問題では、溶連菌感染後急性糸球体腎炎で入院した7歳女児。入院時の看護計画で適切なのはどれか。という視点から看護のポイントを整理して確認します。
+</div>
+
+<div id="correctMark">正解！</div>
+
+<ol>
+  <li><input type="checkbox" name="checkbox" id="opt1" value="opt1"/>水分摂取を促す。</li>
+  <li><input type="checkbox" name="checkbox" id="opt2" value="opt2"/>1日3回の血圧測定を行う。</li>
+  <li><input type="checkbox" name="checkbox" id="opt3" value="opt3"/>食事の持ち込みを許可する。</li>
+  <li><input type="checkbox" name="checkbox" id="opt4" value="opt4"/>腰部に消炎鎮痛薬を貼用する。</li>
+</ol>
+
+<div class="button">
+  <input type="button" id="back" value="戻る" onclick="goBack(this)">
+  <input type="button" id="answerBtn" value="OK" onclick="oK()">
+  <input type="button" id="next" value="次へ" onclick="goNext(this)">
+</div>
+
+<br/>
+<div id="modal1" style="display: none;">
+  <details>
+    <summary>【答え】</summary>
+    <div>2</div>
+  </details><br/>
+
+  <details>
+    <summary>【答えの解説】</summary>
+    <div><div>浮腫や高血圧があるため水分は指示に従って管理する。</div><div>急性糸球体腎炎では高血圧や脳症に注意し、血圧測定が重要である。</div><div>塩分・水分管理が必要なため自由な持ち込みは不適切である。</div><div>腎炎の看護計画として優先されない。</div></div>
+  </details><br/>
+
+  <details>
+    <summary>【選択肢の解説】</summary>
+    <ul>
+        <li><strong>1</strong>：浮腫や高血圧があるため水分は指示に従って管理する。</li>
+        <li><strong>2</strong>：急性糸球体腎炎では高血圧や脳症に注意し、血圧測定が重要である。</li>
+        <li><strong>3</strong>：塩分・水分管理が必要なため自由な持ち込みは不適切である。</li>
+        <li><strong>4</strong>：腎炎の看護計画として優先されない。</li>
+    </ul>
+  </details>
+
+  <br />
+  <input type="button" class="close" value="とじる" onclick="closeModal()">
+</div>
+
+<div id="pageMove"></div>
+
+<script src="shippei1.js"></script>
+<script src="answer.js"></script>
+<script src="../page_move/page_move.js"></script>
+</body>
+</html>

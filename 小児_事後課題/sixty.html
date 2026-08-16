@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>小児_事後課題 60</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../page_move/page_move.css">
+</head>
+<body>
+<div class="LineUp">
+  問題 <span id="problemNumber" value="60"></span>
+  <input type="button" value="答え" onclick="showAnswer()">
+</div>
+
+<div class="box">
+  麻疹と診断された1歳男児が細気管支炎を併発し付き添い入院した。入院時、母親への説明で適切なのはどれか。
+</div>
+
+<div style="margin: 0.75rem 0 1rem; padding: 0.7rem 1rem; border-left: 4px solid #5a8dee; background: #f4f8ff; border-radius: 4px; line-height: 1.6;">
+  この問題では、麻疹と診断された1歳男児が細気管支炎を併発し付き添い入院した。入院時、母親への説明で適切なのはどれか。という視点から看護のポイントを整理して確認します。
+</div>
+
+<div id="correctMark">正解！</div>
+
+<ol>
+  <li><input type="checkbox" name="checkbox" id="opt1" value="opt1"/>面会は解熱するまで制限する。</li>
+  <li><input type="checkbox" name="checkbox" id="opt2" value="opt2"/>発疹が消失するまで清拭は控える。</li>
+  <li><input type="checkbox" name="checkbox" id="opt3" value="opt3"/>含嗽して口腔粘膜を保清する。</li>
+  <li><input type="checkbox" name="checkbox" id="opt4" value="opt4"/>個室に入室する。</li>
+</ol>
+
+<div class="button">
+  <input type="button" id="back" value="戻る" onclick="goBack(this)">
+  <input type="button" id="answerBtn" value="OK" onclick="oK()">
+  <input type="button" id="next" value="次へ" onclick="goNext(this)">
+</div>
+
+<br/>
+<div id="modal1" style="display: none;">
+  <details>
+    <summary>【答え】</summary>
+    <div>4</div>
+  </details><br/>
+
+  <details>
+    <summary>【答えの解説】</summary>
+    <div><div>感染対策は解熱だけで判断しない。</div><div>清潔保持は状態に合わせて行う。</div><div>1歳児では含嗽は困難である。</div><div>麻疹は空気感染対策が必要で、個室管理が適切である。</div></div>
+  </details><br/>
+
+  <details>
+    <summary>【選択肢の解説】</summary>
+    <ul>
+        <li><strong>1</strong>：感染対策は解熱だけで判断しない。</li>
+        <li><strong>2</strong>：清潔保持は状態に合わせて行う。</li>
+        <li><strong>3</strong>：1歳児では含嗽は困難である。</li>
+        <li><strong>4</strong>：麻疹は空気感染対策が必要で、個室管理が適切である。</li>
+    </ul>
+  </details>
+
+  <br />
+  <input type="button" class="close" value="とじる" onclick="closeModal()">
+</div>
+
+<div id="pageMove"></div>
+
+<script src="shippei1.js"></script>
+<script src="answer.js"></script>
+<script src="../page_move/page_move.js"></script>
+</body>
+</html>
